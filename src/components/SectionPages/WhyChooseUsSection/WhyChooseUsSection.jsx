@@ -22,7 +22,7 @@ export default function WhyChooseUsSection() {
         {/* Left Image Section */}
         <div className="relative h-[200px] lg:h-auto">
           <img
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=800&fit=crop"
+            src="https://i.pinimg.com/736x/b7/3c/d9/b73cd905928cd9dba0376bc906a85098.jpg"
             alt="Chiropractic Treatment"
             className="w-full h-full object-cover"
           />

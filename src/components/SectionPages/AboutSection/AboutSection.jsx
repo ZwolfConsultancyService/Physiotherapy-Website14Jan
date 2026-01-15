@@ -57,7 +57,7 @@ export default function AboutSection() {
               {/* Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
+                  src="https://i.pinimg.com/736x/09/73/eb/0973eb1dfc7bbca9eadbbb4c25650729.jpg"
                   alt="Physiotherapy Treatment"
                   className="w-full h-[500px] object-cover"
                 />

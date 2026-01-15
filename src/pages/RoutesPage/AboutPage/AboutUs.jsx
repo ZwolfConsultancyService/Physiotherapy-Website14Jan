@@ -280,7 +280,7 @@ export default function AboutUs() {
             <div className="order-1 lg:order-2">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://i.pinimg.com/1200x/59/65/11/596511ec926f7c559e7f33e2e27d84b4.jpg"
+                  src="https://i.pinimg.com/736x/86/a5/2a/86a52ab0b7a65d81d4872fc35354863e.jpg"
                   alt="Clinic Comfortness"
                   className="w-full h-auto object-cover"
                 />
