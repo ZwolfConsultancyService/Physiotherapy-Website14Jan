@@ -8,7 +8,7 @@ import {
 
 const StatisticsSection = () => {
   return (
-    <section className="w-full bg-gray-50 py-20 px-4 md:px-10">
+    <section className="w-full bg-gray-50 py-10 px-2 md:px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
         {/* LEFT CONTENT */}

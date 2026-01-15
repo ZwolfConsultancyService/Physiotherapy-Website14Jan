@@ -133,7 +133,7 @@ const ServicesPage = () => {
 
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
           <h1
-            className="text-4xl md:text-6xl  text-white mb-4"
+            className="text-4xl md:text-6xl mt-20  text-white mb-4"
             style={{
               fontFamily: "'Zalando Sans Expanded', sans-serif",
               fontWeight: 200,
@@ -175,7 +175,7 @@ const ServicesPage = () => {
             </div>
 
             <h2
-              className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+              className="text-3xl md:text-5xl  text-gray-900 mb-6"
               style={{
                 fontFamily: "'Zalando Sans Expanded', sans-serif",
                 fontWeight: 200,
@@ -231,7 +231,7 @@ const ServicesPage = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-2xl  text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {service.title}
                   </h3>
 

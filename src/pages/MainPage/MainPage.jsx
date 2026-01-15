@@ -148,6 +148,7 @@ const MainPage = () => {
         data-aos-duration="1200"
         data-aos-delay="100"
         data-aos-offset="150"
+        
       >
         <StatisticsSection />
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
   return (
@@ -37,9 +38,13 @@ export default function AboutSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="bg-pink-500 hover:bg-pink-600 text-white  text-sm tracking-wider uppercase px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mt-4">
+            <Link to='/services'>
+            
+              <button className="bg-pink-500 hover:bg-pink-600 text-white  text-sm tracking-wider uppercase px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mt-4">
               VIEW SERVICES
             </button>
+            </Link>
+          
           </div>
 
           {/* Right Image */}

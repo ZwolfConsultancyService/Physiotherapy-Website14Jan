@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,21 +9,27 @@ export default function HeroSection() {
     {
       subtitle: "PHYSIOTHERAPY & CHIROPARCTOR CLINIC",
       title: "Best Chiropractic Clinic For Relax",
-      description: "Chiropractic care is the practice of to of physical ailments, including muscle strain back pain, and more.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&h=800&fit=crop"
+      description:
+        "Chiropractic care is the practice of to of physical ailments, including muscle strain back pain, and more.",
+      image:
+        "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&h=800&fit=crop",
     },
     {
       subtitle: "PROFESSIONAL HEALTHCARE SERVICES",
       title: "Expert Pain Management Solutions",
-      description: "Our experienced team provides personalized treatment plans to help you recover faster and live pain-free.",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&h=800&fit=crop"
+      description:
+        "Our experienced team provides personalized treatment plans to help you recover faster and live pain-free.",
+      image:
+        "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&h=800&fit=crop",
     },
     {
       subtitle: "SPECIALIZED THERAPY CENTER",
       title: "Advanced Rehabilitation Techniques",
-      description: "State-of-the-art facilities and proven methods to restore your mobility and improve quality of life.",
-      image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=800&fit=crop"
-    }
+      description:
+        "State-of-the-art facilities and proven methods to restore your mobility and improve quality of life.",
+      image:
+        "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=800&fit=crop",
+    },
   ];
 
   const nextSlide = () => {
@@ -49,7 +56,10 @@ export default function HeroSection() {
             </div>
 
             {/* Main Title */}
-            <h1 style={{ fontFamily: "Lexend Peta, sans-serif" }} className="text-4xl md:text-5xl lg:text-6xl  text-[#0a1f44] leading-tight">
+            <h1
+              style={{ fontFamily: "Lexend Peta, sans-serif" }}
+              className="text-4xl md:text-5xl lg:text-6xl  text-[#0a1f44] leading-tight"
+            >
               {slides[currentSlide].title}
             </h1>
 
@@ -59,9 +69,11 @@ export default function HeroSection() {
             </p>
 
             {/* CTA Button */}
-            <button className="bg-pink-500 hover:bg-pink-600 text-white  px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              GET APPOINTMENT
-            </button>
+            <Link to="/contact">
+              <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                GET APPOINTMENT
+              </button>
+            </Link>
           </div>
 
           {/* Right Image */}
@@ -83,7 +95,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-     
       <div className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-10">
         <button
           onClick={prevSlide}
@@ -109,8 +120,8 @@ export default function HeroSection() {
             onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-300 ${
               index === currentSlide
-                ? 'w-12 h-3 bg-pink-500'
-                : 'w-3 h-3 bg-gray-400 hover:bg-gray-500'
+                ? "w-12 h-3 bg-pink-500"
+                : "w-3 h-3 bg-gray-400 hover:bg-gray-500"
             } rounded-full`}
             aria-label={`Go to slide ${index + 1}`}
           />
