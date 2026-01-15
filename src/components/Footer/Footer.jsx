@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ChevronUp } from 'lucide-react';
 
 export default function Footer() {
@@ -7,19 +8,19 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Appointment', href: '#appointment' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const symptoms = [
-    { name: 'Laser Therapy', href: '#laser-therapy' },
-    { name: 'Massage Therapy', href: '#massage-therapy' },
-    { name: 'Physio Therapy', href: '#physio-therapy' },
-    { name: 'Physiotherapy', href: '#physiotherapy' },
-    { name: 'Sport Injury', href: '#sport-injury' }
+    { name: 'Laser Therapy', path: '/service/laser-therapy' },
+    { name: 'Massage Therapy', path: '/service/massage-therapy' },
+    { name: 'Physio Therapy', path: '/service/physio-therapy' },
+    { name: 'Physiotherapy', path: '/service/physiotherapy' },
+    { name: 'Sport Injury', path: '/service/sport-injury' }
   ];
 
   return (
@@ -38,15 +39,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <div className="text-white  text-xl">C</div>
+                <div className="text-white text-xl">C</div>
               </div>
               <div>
-                <div className=" text-xl">Chirokind</div>
+                <div className="text-xl">Chirokind</div>
                 <div className="text-sm text-gray-400">Chiropractic Clinic</div>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               We address the cause of your pain, not just the symptom.
             </p>
@@ -54,19 +55,19 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl  mb-6 relative">
+            <h3 className="text-xl mb-6 relative">
               Quick Links
               <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-pink-500 -mb-3"></span>
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.path}
                     className="text-gray-300 hover:text-pink-500 transition-colors duration-300 inline-block"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,19 +75,19 @@ export default function Footer() {
 
           {/* Symptom */}
           <div>
-            <h3 className="text-xl  mb-6 relative">
+            <h3 className="text-xl mb-6 relative">
               Symptom
               <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-pink-500 -mb-3"></span>
             </h3>
             <ul className="space-y-3">
               {symptoms.map((symptom) => (
                 <li key={symptom.name}>
-                  <a
-                    href={symptom.href}
+                  <Link
+                    to={symptom.path}
                     className="text-gray-300 hover:text-pink-500 transition-colors duration-300 inline-block"
                   >
                     {symptom.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,7 +95,7 @@ export default function Footer() {
 
           {/* Get In Touch */}
           <div>
-            <h3 className="text-xl  mb-6 relative">
+            <h3 className="text-xl mb-6 relative">
               Get In Touch
               <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-pink-500 -mb-3"></span>
             </h3>
@@ -126,9 +127,6 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            {/* <p>
-              Copyright © <span className="text-white">Chirokind</span> Therapy Clinic 2025. All rights reserved.
-            </p> */}
             <p>
               Created by <span className="text-white">ZwolfConsultancy</span>
             </p>

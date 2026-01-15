@@ -283,7 +283,16 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, MapPin, Clock, Send, CalendarCheck } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  CalendarCheck,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -339,16 +348,15 @@ export default function Navbar() {
                   Call for help: (+1800)-456-7890
                 </span>
               </a>
-             <Link
-  to="/contact"
-  className="flex items-center gap-2 hover:text-blue-300 transition-colors"
->
-  <CalendarCheck size={16} />
-  <span className="hidden sm:inline text-sm md:text-base">
-    Book An Appointment
-  </span>
-</Link>
-
+              <Link
+                to="/contact"
+                className="flex items-center gap-2 hover:text-blue-300 transition-colors"
+              >
+                <CalendarCheck size={16} />
+                <span className="hidden sm:inline text-sm md:text-base">
+                  Book An Appointment
+                </span>
+              </Link>
             </div>
           </div>
         </div>
