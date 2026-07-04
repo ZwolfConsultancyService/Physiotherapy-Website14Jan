@@ -682,13 +682,49 @@ export const servicesDetailData = {
 };
 
 // ==================== CAROUSEL SERVICES DATA ====================
+// export const carouselServicesData = [
+//   { title: "LASER Therapy", slug: "laser-therapy", image:laser, description: "Advanced laser treatment for pain relief and tissue healing" },
+//   { title: "Sports Injury Rehab", slug: "sports-injury-rehab", image: "https://i.pinimg.com/1200x/03/da/11/03da1154f58d46e605069c0a1b215595.jpg", description: "Expert rehabilitation for athletes across Delhi NCR" },
+//   { title: "Pelvic Floor Rehab", slug: "pelvic-floor-rehabilitation", image: "https://i.pinimg.com/736x/58/4d/1a/584d1ab91ddfd29bab9d673483cbfed6.jpg", description: "Specialized pelvic health PhysioCentric for women and men" },
+//   { title: "Dry Needling", slug: "dry-needling", image: dry, description: "Trigger point release for deep muscle pain relief" },
+ 
+//   { title: "Manual Muscle Therapy", slug: "manual-muscle-therapy", image: "https://i.pinimg.com/1200x/b6/b5/e7/b6b5e7c001aa6cf1de57164d9736184d.jpg", description: "Hands-on therapy for muscle pain and mobility restoration" },
+//   { title: "Physiotherapist", slug: "physiotherapist", image: head, description: "Consult an expert physiotherapist in South Delhi & Gurgaon" },
+//   { title: "Physiotherapy Centre", slug: "physiotherapy-centre", image: aboutsection, description: "Leading physiotherapy centre serving all of Delhi NCR" },
+// ];
+
+
+
+
 export const carouselServicesData = [
-  { title: "LASER Therapy", slug: "laser-therapy", image:laser, description: "Advanced laser treatment for pain relief and tissue healing" },
-  { title: "Sports Injury Rehab", slug: "sports-injury-rehab", image: "https://i.pinimg.com/1200x/03/da/11/03da1154f58d46e605069c0a1b215595.jpg", description: "Expert rehabilitation for athletes across Delhi NCR" },
-  { title: "Pelvic Floor Rehab", slug: "pelvic-floor-rehabilitation", image: "https://i.pinimg.com/736x/58/4d/1a/584d1ab91ddfd29bab9d673483cbfed6.jpg", description: "Specialized pelvic health PhysioCentric for women and men" },
-  { title: "Dry Needling", slug: "dry-needling", image: dry, description: "Trigger point release for deep muscle pain relief" },
-  { title: "Posture Correction", slug: "posture-correction-training", image: "https://i.pinimg.com/736x/3b/90/02/3b90020e8f97ca6e8f61226fe8cd99bc.jpg", description: "Correct your posture and eliminate chronic neck and back pain" },
-  { title: "Manual Muscle Therapy", slug: "manual-muscle-therapy", image: "https://i.pinimg.com/1200x/b6/b5/e7/b6b5e7c001aa6cf1de57164d9736184d.jpg", description: "Hands-on therapy for muscle pain and mobility restoration" },
-  { title: "Physiotherapist", slug: "physiotherapist", image: head, description: "Consult an expert physiotherapist in South Delhi & Gurgaon" },
-  { title: "Physiotherapy Centre", slug: "physiotherapy-centre", image: aboutsection, description: "Leading physiotherapy centre serving all of Delhi NCR" },
+  {
+    title: "Manual Muscle Therapy",
+    slug: "manual-muscle-therapy",
+    image: image,
+    description: "Hands-on therapy for muscle pain and mobility restoration",
+  },
+  {
+    title: "Kinesiotaping",
+    slug: "kinesiotaping",
+    image: tap,
+    description: "Elastic taping technique to support muscles and reduce swelling",
+  },
+  {
+    title: "Dry Needling",
+    slug: "dry-needling",
+    image: dry,
+    description: "Trigger point release for deep muscle pain relief",
+  },
+  {
+    title: "Muscle Stimulation",
+    slug: "muscle-stimulation",
+    image: Kinesiotaping,
+    description: "Electrical stimulation therapy to strengthen and relax muscles",
+  },
+  {
+    title: "Cupping Therapy",
+    slug: "cupping-therapy",
+    image: cupping,
+    description: "Traditional suction therapy to improve blood flow and ease pain",
+  },
 ];

@@ -293,14 +293,14 @@ export default function DoctorsPage() {
                 ))}
               </div>
 
-              <Link to="/contacts">
+              {/* <Link to="/contacts">
                 <button
                   className="mt-2 bg-black text-white px-8 py-4 text-xs tracking-widest uppercase font-bold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
                   aria-label="Book appointment with Dr. Divya Sharma"
                 >
                   Book With Dr. Divya
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
