@@ -49,7 +49,7 @@ export default function AboutSection() {
 
             {/* Heading */}
             <h2 className="pc-display text-3xl md:text-4xl lg:text-[3.25rem] leading-[1.1] font-medium text-black">
-              New Delhi's trusted physiotherapy centre
+             Physiocentric - a trusted physiotherapy centre
             </h2>
 
             {/* Paragraphs */}

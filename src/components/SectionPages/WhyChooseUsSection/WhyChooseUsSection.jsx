@@ -88,15 +88,7 @@ export default function WhyChooseUsSection() {
               Care that treats the cause, not just the pain.
             </h2>
 
-            {/* pull-quote — premium clinics lean on patient trust */}
-            <blockquote className="mt-6 pl-5 border-l-2 pc-gold-border">
-              <p className="pc-display italic text-lg sm:text-xl text-black/75 leading-snug">
-                "The most attentive physiotherapy care I've had in Delhi."
-              </p>
-              <cite className="pc-mono not-italic text-[10px] tracking-[0.15em] uppercase text-black/40 mt-2 block">
-                — Google Review, Gulmohar Park
-              </cite>
-            </blockquote>
+        
 
             {/* Points */}
             <div className="mt-9 sm:mt-10 divide-y divide-black/10 border-t border-black/10">
