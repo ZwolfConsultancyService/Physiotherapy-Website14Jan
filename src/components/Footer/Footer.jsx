@@ -1,25 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ChevronUp } from "lucide-react";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/Logo.png"; // Make sure this is the PhysioCentric logo
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const quickLinks = [
     { name: "Home",       path: "/" },
-    { name: "About Us",   path: "/about-us" },
+    { name: "About Us",   path: "/about" },
     { name: "Services",   path: "/services" },
     { name: "Blog",       path: "/blogs" },
     { name: "Contact",    path: "/contacts" },
   ];
 
-  const symptoms = [
+  const services = [
     { name: "Laser Therapy",    path: "/service/laser-therapy" },
-    { name: "Massage Therapy",  path: "/service/massage-therapy" },
-    { name: "Physio Therapy",   path: "/service/physio-therapy" },
-    { name: "Physiotherapy",    path: "/service/physiotherapy" },
-    { name: "Sport Injury",     path: "/service/sport-injury" },
+    { name: "Cupping Therapy",  path: "/service/cupping-therapy" },
+    { name: "Dry Needling",   path: "service/dry-needling" },
+    { name: "Physiotherapist",    path: "/service/physiotherapist" },
+    { name: "Physiotherapy Centre",     path: "/service/physiotherapy-centre" },
   ];
 
   return (
@@ -42,18 +42,18 @@ export default function Footer() {
             <Link to="/" className="flex items-center gap-3">
               <img
                 src={logo}
-                alt="Chirokind Logo"
+                alt="PhysioCentric Logo"
                 className="w-12 h-12 object-contain brightness-0 invert"
               />
               <div>
-                <div className="text-xl font-bold tracking-tight">Chirokind</div>
+                <div className="text-xl font-bold tracking-tight">PhysioCentric</div>
                 <div className="text-xs text-gray-400 tracking-widest uppercase">
-                  Chiropractic Clinic
+                  Recover · Restore · Rebuild
                 </div>
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              We address the cause of your pain, not just the symptom.
+              Led by <strong className="text-white">Dr. Divya Sharma</strong>, we address the root cause of your pain, not just the symptoms.
             </p>
             <div className="w-12 h-0.5 bg-white opacity-20"></div>
           </div>
@@ -79,21 +79,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Symptoms */}
+          {/* Services */}
           <div>
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-6 relative">
-              Symptom
+              Our Services
               <span className="absolute -bottom-3 left-0 w-8 h-0.5 bg-white"></span>
             </h3>
             <ul className="space-y-3">
-              {symptoms.map((symptom) => (
-                <li key={symptom.name}>
+              {services.map((service) => (
+                <li key={service.name}>
                   <Link
-                    to={symptom.path}
+                    to={service.path}
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm tracking-wide inline-flex items-center gap-2 group"
                   >
                     <span className="w-0 h-px bg-white transition-all duration-300 group-hover:w-4"></span>
-                    {symptom.name}
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -171,6 +171,9 @@ export default function Footer() {
               >
                 ZwolfConsultancy
               </a>
+            </p>
+            <p className="text-gray-600">
+              © {new Date().getFullYear()} PhysioCentric. All rights reserved.
             </p>
           </div>
         </div>

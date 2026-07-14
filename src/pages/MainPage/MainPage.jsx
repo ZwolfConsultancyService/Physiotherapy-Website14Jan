@@ -279,6 +279,8 @@
 
 // export default MainPage;
 
+
+
 import React, { useEffect } from "react";
 
 import HeroSection from "../../components/SectionPages/HeroSection/HeroSection";
@@ -343,12 +345,13 @@ const MainPage = () => {
       </Reveal>
 
       <Reveal direction="up">
-        <StatisticsSection />
+        <LatestBlogsSection />
       </Reveal>
 
       <Reveal direction="up">
-        <LatestBlogsSection />
+        <StatisticsSection />
       </Reveal>
+
 
       <style>{`
         html {

@@ -6,6 +6,9 @@ body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+
+
+
 html,
 body {
   width: 100%;
@@ -28,15 +31,5 @@ body {
 body > div {
   width: 100%;
 }
+   
 
-
-/* Browser scrollbar hide karo */
-html {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-  scroll-behavior: smooth; /* Smooth scrolling */
-}
-
-html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
