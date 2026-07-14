@@ -68,7 +68,7 @@ export default function AboutSection() {
             </div>
 
             {/* Info pills — thin black borders, mono labels, echoes the hero's bottom info strip */}
-            <div className="flex flex-wrap gap-3 mt-8">
+            {/* <div className="flex flex-wrap gap-3 mt-8">
               {[
                 { label: "Location", value: "Gulmohar Park, New Delhi" },
                 { label: "Hours", value: "Mon–Sat, 9AM–7PM" },
@@ -81,7 +81,7 @@ export default function AboutSection() {
                   <p className="text-sm font-medium text-black mt-0.5">{item.value}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* CTA */}
             <Link to="/services">

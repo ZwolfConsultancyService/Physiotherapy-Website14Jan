@@ -189,24 +189,7 @@ export default function DoctorsPage() {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }} aria-hidden="true" />
       </section>
 
-      {/* ── STATS ── */}
-      <section className="bg-white py-16 border-b border-gray-100" aria-label="Clinic statistics">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-14 h-14 bg-black rounded-sm flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
-                  <s.icon size={22} className="text-white" />
-                </div>
-                <p className="text-4xl font-black text-black mb-1" style={{ fontFamily: "Lexend Peta, sans-serif" }}>
-                  {s.number}
-                </p>
-                <p className="text-xs tracking-widest uppercase text-gray-400 font-semibold">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* ── HEAD DOCTOR SECTION ── */}
       <section className="bg-white py-20 md:py-28 border-b border-gray-100" aria-label="Chief physiotherapist profile">
@@ -370,39 +353,7 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      {/* ── SPECIALIZATIONS ── */}
-      <section className="bg-white py-20 md:py-28" aria-label="Areas of specialization">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-4" aria-hidden="true">
-            <div className="w-12 h-0.5 bg-black" />
-            <span className="text-xs tracking-widest uppercase font-semibold text-black">What We Treat</span>
-          </div>
-          <h2
-            className="text-4xl md:text-5xl text-black leading-tight mb-14 max-w-xl"
-            style={{ fontFamily: "Lexend Peta, sans-serif" }}
-          >
-            Areas of Specialization
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {specializations.map((sp, i) => (
-              <div
-                key={i}
-                className="group border border-gray-100 p-7 hover:bg-black hover:border-black transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-black group-hover:bg-white rounded-sm flex items-center justify-center mb-5 transition-colors duration-300" aria-hidden="true">
-                  <sp.icon size={20} className="text-white group-hover:text-black transition-colors duration-300" />
-                </div>
-                <h3 className="text-base font-bold text-black group-hover:text-white mb-3 transition-colors duration-300">
-                  {sp.title}
-                </h3>
-                <p className="text-sm text-gray-500 group-hover:text-gray-300 leading-relaxed transition-colors duration-300">
-                  {sp.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ── VISIT US ── */}
       <section className="bg-black text-white py-20" aria-label="Visit PhysioCentric">
@@ -455,14 +406,8 @@ export default function DoctorsPage() {
             </div>
 
             <div className="border border-white/10 p-10 text-center">
-              <div className="flex justify-center mb-3" aria-label="5 out of 5 stars rating">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-sm text-gray-400 mb-6">Rated 5.0 · 37 Google Reviews</p>
+             
+             
               <p className="text-gray-300 text-base leading-relaxed mb-8">
                 Ready to start your recovery journey? Book a session with one of our experts today.
               </p>

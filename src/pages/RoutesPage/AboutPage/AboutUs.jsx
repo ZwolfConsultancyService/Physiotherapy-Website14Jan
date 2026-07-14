@@ -15,6 +15,7 @@ import {
   Quote 
 } from "lucide-react";
 import head from '../../../assets/teamfolder/head.jpeg'
+import about from '../../../assets/aboutsection.png'
 
 export default function AboutUs() {
   return (
@@ -77,7 +78,8 @@ export default function AboutUs() {
       <section className="relative h-[480px] sm:h-[520px] md:h-[560px] bg-black overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center" />
+          <div className="absolute inset-0  bg-cover bg-center"
+          style={{ backgroundImage: `url(${about})` }} />
         </div>
 
         <div className="relative z-20 container mx-auto px-4 sm:px-6 h-full flex items-center">
@@ -118,25 +120,13 @@ export default function AboutUs() {
             <div className="bg-gray-50 overflow-hidden shadow-2xl">
               <div className="aspect-[4/5] sm:aspect-[3/4] relative">
                 <img
-                  src="https://i.pinimg.com/736x/76/43/bb/7643bb9b2377267262cc635b7b3c7b8b.jpg"
+                  src={about}
                   alt="Dr. Divya Sharma and team at PhysioCentric clinic, New Delhi"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <div className="bg-white/95 backdrop-blur-sm p-5 sm:p-6 shadow-lg border-l-4 border-black">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-black flex items-center justify-center flex-shrink-0">
-                        <Award className="w-7 h-7 text-white" strokeWidth={1.5} />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold text-gray-900">25+ Years of Excellence</h3>
-                        <p className="text-sm text-gray-500">Trusted by 1700+ patients</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -176,66 +166,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ─── MISSION & VALUES ─── */}
-      <section className="bg-gray-50/60 py-16 sm:py-20 border-y border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="flex justify-center items-center gap-3 mb-4">
-              <span className="w-10 h-[2px] bg-black" />
-              <span className="text-black/60 text-xs tracking-[0.2em] uppercase font-medium">Our Ethos</span>
-              <span className="w-10 h-[2px] bg-black" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">What Drives Us</h2>
-            <p className="text-gray-500 text-sm sm:text-base">
-              Every decision we make is rooted in compassion, evidence‑based practice, 
-              and a relentless pursuit of your wellbeing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Compassionate Care",
-                desc: "We listen, understand, and treat you as a whole person – not just a condition."
-              },
-              {
-                icon: Shield,
-                title: "Evidence‑Based Practice",
-                desc: "Our methods are backed by the latest research, ensuring safe and effective outcomes."
-              },
-              {
-                icon: Clock,
-                title: "Personalised Attention",
-                desc: "Every patient receives a customised plan that respects their goals, lifestyle, and pace."
-              },
-              {
-                icon: Users,
-                title: "Collaborative Teamwork",
-                desc: "We work closely with GPs, surgeons, and specialists to provide integrated care."
-              },
-              {
-                icon: Star,
-                title: "Proven Results",
-                desc: "1700+ recovered patients and a 100% satisfaction rate speak for themselves."
-              },
-              {
-                icon: Award,
-                title: "Excellence in Rehabilitation",
-                desc: "Recognised for outstanding contributions to physiotherapy in Delhi NCR."
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100 group">
-                <div className="w-12 h-12 bg-black/5 flex items-center justify-center rounded-full mb-5 group-hover:bg-black/10 transition">
-                  <item.icon className="w-6 h-6 text-black" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-lg font-bold text-black mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* ─── DR. DIVYA SHARMA – SPOTLIGHT ─── */}
       <section className="py-16 sm:py-20">
@@ -293,33 +224,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ─── STATS (enhanced) ─── */}
-      <div className="bg-black border-y border-gray-800 py-16 sm:py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-white/40 text-xs tracking-[0.25em] uppercase font-light block mb-2">Our Impact</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">PhysioCentric in Numbers</h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
-            {[
-              { value: "1700+", label: "Happy Patients", icon: Heart },
-              { value: "100%", label: "Satisfaction Rate", icon: ThumbsUp },
-              { value: "27+", label: "Expert Staff", icon: Users },
-              { value: "25+", label: "Years of Experience", icon: Award }
-            ].map((stat, i) => (
-              <div key={i} className="text-center group">
-                <div className="flex justify-center mb-5">
-                  <div className="w-20 h-20 border border-white/20 flex items-center justify-center group-hover:border-white/60 transition-colors duration-300">
-                    <stat.icon className="w-8 h-8 text-white/70 group-hover:text-white transition" strokeWidth={1.5} />
-                  </div>
-                </div>
-                <p className="text-4xl sm:text-5xl font-bold text-white mb-1">{stat.value}</p>
-                <p className="text-xs text-white/40 tracking-widest uppercase font-light">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     
 
       {/* ─── WHY CHOOSE US (imported) ─── */}
       <WhyChooseUsSection />

@@ -345,12 +345,13 @@ const MainPage = () => {
       </Reveal>
 
       <Reveal direction="up">
-        <LatestBlogsSection />
+        <StatisticsSection />
       </Reveal>
 
       <Reveal direction="up">
-        <StatisticsSection />
+        <LatestBlogsSection />
       </Reveal>
+
 
 
       <style>{`

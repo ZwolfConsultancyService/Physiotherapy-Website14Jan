@@ -1,7 +1,46 @@
-import React from "react";
-import { UserPlus, ThumbsUp, Users, Award, ArrowUpRight } from "lucide-react";
+import React, { useState } from "react";
+import { Plus, ArrowUpRight } from "lucide-react";
 
-const StatisticsSection = () => {
+const faqs = [
+    {
+        question: "Do I need a doctor's referral to book a session?",
+        answer:
+            "No referral needed. You can book directly with a PhysioCentric therapist, and we'll loop in your doctor with a progress note if it's useful for your case.",
+    },
+    {
+        question: "What should I bring to my first appointment?",
+        answer:
+            "Wear or bring comfortable clothing that lets us assess the area involved, along with any prior scans, X-rays, or reports. We'll handle the paperwork on-site.",
+    },
+    {
+        question: "How many sessions will I actually need?",
+        answer:
+            "It depends on the condition, but most plans run 4 to 8 sessions. After your first assessment, we'll give you a realistic timeline instead of an open-ended commitment.",
+    },
+    {
+        question: "Can you help with recovery after surgery?",
+        answer:
+            "Yes, post-surgical rehab is one of our core programs. We coordinate with your surgeon's protocol and build a phased plan to rebuild strength and range of motion safely.",
+    },
+    {
+        question: "Is physiotherapy covered by insurance?",
+        answer:
+            "Most major insurers cover physiotherapy in full or in part. Share your policy details when you book and our front desk will confirm your coverage before your first visit.",
+    },
+    {
+        question: "What if I don't feel better after a few sessions?",
+        answer:
+            "We reassess every few sessions by design. If progress stalls, we adjust the plan, bring in a senior therapist, or refer you onward, rather than repeating what isn't working.",
+    },
+];
+
+const FaqSection = () => {
+    const [openIndex, setOpenIndex] = useState(0);
+
+    const toggle = (index) => {
+        setOpenIndex((prev) => (prev === index ? -1 : index));
+    };
+
     return (
         <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-12 relative overflow-hidden">
             {/* Subtle background pattern */}
@@ -17,53 +56,34 @@ const StatisticsSection = () => {
                         <div className="flex items-center gap-3 mb-5">
                             <div className="w-10 h-0.5 bg-black"></div>
                             <span className="uppercase text-black/60 text-xs tracking-[0.2em] font-medium">
-                                Our Impact
+                                PhysioCentric FAQ
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl text-black leading-[1.1] font-light tracking-tight">
-                            Know More About
+                            Questions Before
                             <br />
-                            <span className="font-bold">Our Success</span>
+                            <span className="font-bold">You Recover</span>
                         </h2>
                     </div>
                     <p className="text-black/50 max-w-md text-sm leading-relaxed lg:text-right">
-                        Bring to the table win-win survival strategies to ensure
-                        proactive domination. At the end of the day, going forward,
-                        a new normal.
+                        Recover, Restore, Rebuild — everything you need to know before
+                        your first session at PhysioCentric. Can't find your answer?
+                        Reach out and we'll walk you through it.
                     </p>
                 </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/10 rounded-2xl overflow-hidden border border-black/5">
-
-                    <StatItem
-                        icon={<UserPlus size={28} strokeWidth={1.5} />}
-                        value="2,879"
-                        label="Patients Recovered"
-                        trend="+12%"
-                    />
-
-                    <StatItem
-                        icon={<ThumbsUp size={28} strokeWidth={1.5} />}
-                        value="100%"
-                        label="Satisfaction Rate"
-                        trend="Excellent"
-                    />
-
-                    <StatItem
-                        icon={<Users size={28} strokeWidth={1.5} />}
-                        value="27+"
-                        label="Therapists & Staff"
-                        trend="Growing"
-                    />
-
-                    <StatItem
-                        icon={<Award size={28} strokeWidth={1.5} />}
-                        value="17"
-                        label="Industry Awards"
-                        trend="Recognized"
-                    />
-
+                {/* FAQ list */}
+                <div className="rounded-2xl overflow-hidden border border-black/10 bg-black/10 gap-px grid">
+                    {faqs.map((faq, index) => (
+                        <FaqItem
+                            key={index}
+                            index={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                            isOpen={openIndex === index}
+                            onToggle={() => toggle(index)}
+                        />
+                    ))}
                 </div>
 
                 {/* Bottom decorative line */}
@@ -79,26 +99,41 @@ const StatisticsSection = () => {
     );
 };
 
-const StatItem = ({ icon, value, label, trend }) => {
+const FaqItem = ({ index, question, answer, isOpen, onToggle }) => {
     return (
-        <div className="group bg-white p-8 transition-all duration-300 hover:bg-black/5 relative">
-            <div className="flex items-start justify-between">
-                <div className="flex items-center gap-4">
-                    <div className="text-black/70 group-hover:text-black transition-colors duration-300">
-                        {icon}
-                    </div>
-                    <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-black tracking-tight">
-                            {value}
-                        </h3>
-                        <p className="text-black/40 text-xs uppercase tracking-wider mt-0.5 font-medium">
-                            {label}
-                        </p>
-                    </div>
+        <div className="group bg-white transition-colors duration-300 hover:bg-black/5 relative">
+            <button
+                onClick={onToggle}
+                aria-expanded={isOpen}
+                className="w-full text-left p-8 flex items-start justify-between gap-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40 rounded-lg"
+            >
+                <div className="flex items-start gap-4">
+                    <span className="text-black/30 text-xs font-medium mt-1.5 tabular-nums">
+                        {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-lg md:text-xl font-semibold text-black tracking-tight">
+                        {question}
+                    </h3>
                 </div>
-                <span className="text-black/30 text-xs font-medium bg-black/5 px-2.5 py-1 rounded-full whitespace-nowrap group-hover:bg-black/10 transition-colors">
-                    {trend}
-                </span>
+                <Plus
+                    size={22}
+                    strokeWidth={1.5}
+                    className={`shrink-0 text-black/50 group-hover:text-black transition-transform duration-300 ${
+                        isOpen ? "rotate-45" : "rotate-0"
+                    }`}
+                />
+            </button>
+
+            <div
+                className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+            >
+                <div className="overflow-hidden">
+                    <p className="text-black/50 text-sm leading-relaxed pl-12 pr-14 pb-8">
+                        {answer}
+                    </p>
+                </div>
             </div>
 
             {/* Hover accent line */}
@@ -107,4 +142,4 @@ const StatItem = ({ icon, value, label, trend }) => {
     );
 };
 
-export default StatisticsSection;
+export default FaqSection;
