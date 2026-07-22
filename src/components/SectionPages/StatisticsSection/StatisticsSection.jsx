@@ -22,16 +22,7 @@ const faqs = [
         answer:
             "Yes, post-surgical rehab is one of our core programs. We coordinate with your surgeon's protocol and build a phased plan to rebuild strength and range of motion safely.",
     },
-    {
-        question: "Is physiotherapy covered by insurance?",
-        answer:
-            "Most major insurers cover physiotherapy in full or in part. Share your policy details when you book and our front desk will confirm your coverage before your first visit.",
-    },
-    {
-        question: "What if I don't feel better after a few sessions?",
-        answer:
-            "We reassess every few sessions by design. If progress stalls, we adjust the plan, bring in a senior therapist, or refer you onward, rather than repeating what isn't working.",
-    },
+   
 ];
 
 const FaqSection = () => {

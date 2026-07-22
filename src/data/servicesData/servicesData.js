@@ -839,7 +839,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Manual Muscle Therapy in South Delhi & Gurgaon",
       subheadline: "Hands-on relief for pain, tightness, and restricted movement",
-      intro: "If your muscles feel knotted, sore, or simply won't loosen up despite rest, manual muscle therapy at PhysioCentric can help. Dr. Divya Sharma uses precise, hands-on techniques to release tension at its source rather than just masking the symptoms.",
+      intro: "An evidence-based, hands-on physiotherapy technique that relieves muscle tension, reduces pain, and restores natural movement. At PhysioCentric, Manual Muscle Therapy is performed by Dr. Divya Sharma as part of a personalised treatment plan, ensuring the underlying cause of your pain is treated—not just the symptoms.Unlike massage that offers only temporary relaxation, Manual Muscle Therapy targets tight muscles, trigger points, and soft tissue restrictions using precise therapeutic techniques. By releasing muscle tension, improving blood circulation, reducing stiffness, and restoring normal muscle function, it helps accelerate healing while enhancing flexibility and mobility.Whether you're recovering from a sports injury, suffering from neck or back pain, dealing with muscle tightness due to poor posture, or experiencing everyday aches and stiffness, Manual Muscle Therapy helps improve movement, relieve discomfort, and prevent recurring problems—so you can return to your daily activities with greater comfort, strength, and confidence.",
       cta: "Book Your Manual Therapy Session",
     },
     description: "Manual Muscle Therapy is a specialized hands-on treatment that targets dysfunctional muscles to relieve pain, restore movement, and improve overall function. Dr. Divya Sharma clinic provides expert manual therapy to patients across South Delhi and Gurgaon, including Panchsheel Park, Defence Colony, DLF, and Sushant Lok.",
@@ -904,10 +904,10 @@ export const servicesDetailData = {
     hero: {
       headline: "Kinesiotaping in South Delhi & Gurgaon",
       subheadline: "Dynamic taping support that moves with your body",
-      intro: "Kinesiotaping gives your muscles and joints extra support without limiting movement. At PhysioCentric, this technique is applied by a trained physiotherapist as part of a complete recovery plan, not as a stand-alone quick fix.",
+      intro: "An evidence-based therapeutic taping technique helps to support muscles and joints, reduce pain, and improve circulation — without restricting movement. At PhysioCentric, this technique is applied by a trained physiotherapist as part of a complete recovery plan, not as a standalone quick fix. Unlike rigid sports tape, the KT moves with your body, providing dynamic support while promoting natural healing. It lifts the skin microscopically, improving blood and lymphatic flow, reducing swelling, and activating the body's natural pain relief mechanisms.  ",
       cta: "Book Your Kinesiotaping Session",
     },
-    description: "Kinesiotaping is an evidence-based therapeutic taping technique used to support muscles and joints, reduce pain, and improve circulation — without restricting movement. Widely used by professional athletes and physiotherapists, it is now available at Dr. Divya Sharma clinic serving Defence Colony, Gulmohar Park, DLF, and all of Delhi NCR.",
+    description:"",
     longDescription: "Unlike rigid sports tape, kinesiotape moves with your body, providing dynamic support while promoting natural healing. It lifts the skin microscopically, improving blood and lymphatic flow, reducing swelling, and activating the body's natural pain relief mechanisms. Our physiotherapist applies kinesiotape as part of a comprehensive treatment plan for optimal results.",
     whyMatters: "A sprained ankle or a strained shoulder needs support during healing, but rigid strapping can weaken the muscle further by restricting natural movement. Kinesiotaping fills this gap — offering support while still letting the joint move, which keeps healing tissue active and reduces recovery time.",
     whoNeedsThis: [
@@ -969,7 +969,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Dry Needling in South Delhi & Gurgaon",
       subheadline: "Targeted trigger point release for stubborn muscle pain",
-      intro: "If deep muscle knots keep coming back no matter how much you stretch or massage, dry needling may reach what other treatments can't. Dr. Divya Sharma uses this precise technique to release trigger points directly.",
+      intro: " Dry needling is a precise, evidence-based Physiotherapy technique that uses fine filiform needles which is inserted into a trigger point — a hyperirritable spot in a taut muscle band — causing a local twitch response that releases the knot, improves blood flow, and resets the neuromuscular system. Patients often experience immediate pain relief and improved mobility. Unlike acupuncture, dry needling is based on modern neuroanatomy and musculoskeletal science. It is highly effective for chronic pain, sports injuries, and movement restrictions. ",
       cta: "Book Your Dry Needling Session",
     },
     description: "Dry needling is a precise, evidence-based PhysioCentric technique that uses fine filiform needles to release trigger points and relieve deep muscle pain. It is highly effective for chronic pain, sports injuries, and movement restrictions. Available at Dr. Divya Sharma clinic for patients in Panchsheel Park, Uday Park, Sushant Lok, and across Delhi NCR.",
@@ -1030,7 +1030,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Muscle Stimulation Therapy in South Delhi & Gurgaon",
       subheadline: "Rebuild strength safely after injury, surgery, or weakness",
-      intro: "When a muscle has weakened from surgery, a cast, or nerve injury, exercise alone can be slow or difficult to start. Electrical muscle stimulation at PhysioCentric helps reactivate that muscle safely from day one.",
+      intro: " Electrical muscle stimulation (EMS) therapy is an electrotherapy technique that uses electrical impulses to produce muscle contractions. EMS mimics the body's natural nerve signals to stimulate muscle contractions, helping to rebuild strength in weakened or atrophied muscles. It is widely used in post-operative rehab, stroke recovery, and sports medicine. Combined with targeted physiotherapy exercises, muscle stimulation delivers measurable improvements in strength and function. ",
       cta: "Book Your EMS Session",
     },
     description: "Electrical muscle stimulation (EMS) therapy uses controlled electrical impulses to activate muscles, reduce pain, and accelerate rehabilitation. Ideal for post-surgical recovery, muscle weakness, and neurological conditions. Available at Dr. Divya Sharma PhysioCentric clinic in South Delhi and Gurgaon.",
@@ -1074,7 +1074,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Cupping Therapy in South Delhi & Gurgaon",
       subheadline: "Deep tissue relief through therapeutic suction",
-      intro: "Cupping therapy at PhysioCentric is applied as part of a clinical treatment plan, not in isolation, giving you the benefits of deep tissue decompression backed by proper physiotherapy assessment.",
+      intro: "Modern cupping therapy combines time-tested healing principles with evidence-based physiotherapy to relieve pain, restore mobility, and support faster recovery. At PhysioCentric, cupping is never used as a standalone treatment—it is carefully integrated into your personalised rehabilitation programme after a detailed clinical assessment by our physiotherapist.Using specialised medical-grade cups, gentle suction is created to decompress tight muscles and surrounding soft tissues. This controlled lifting effect improves local blood circulation, stimulates lymphatic drainage, reduces muscle stiffness, and encourages the body's natural tissue repair process. The result is improved movement, reduced pain, and enhanced recovery without placing additional stress on the affected area.Whether you're living with persistent neck or back pain, recovering from a sports injury, experiencing postural muscle tightness, or dealing with long-standing muscular discomfort, Cupping Therapy helps restore healthy tissue function, improve flexibility, and get you back to an active, pain-free lifestyle with confidence.",
       cta: "Book Your Cupping Session",
     },
     description: "Cupping therapy uses suction cups to decompress soft tissue, improve blood flow, and relieve deep muscle tension. Increasingly popular in sports rehabilitation and pain management, it is offered by Dr. Divya Sharma clinic serving Gulmohar Park, Niti Bagh, Sushant Lok, and Delhi NCR.",
@@ -1118,7 +1118,7 @@ export const servicesDetailData = {
     hero: {
       headline: "IASTM Therapy in South Delhi & Gurgaon",
       subheadline: "Instrument-assisted release for stubborn scar tissue",
-      intro: "When a chronic injury just won't budge with regular therapy, IASTM gives Dr. Divya Sharma a more precise tool to locate and treat the exact restriction in your tissue.",
+      intro: "IASTM (Instrument Assisted Soft Tissue Mobilization) is a technique that uses a specially designed stainless steel tools to detect and treat scar tissue, fascial restrictions, and chronic soft tissue injuries. IASTM tools amplify the therapist's ability to feel and treat soft tissue dysfunction — breaking down adhesions, remodeling scar tissue, and stimulating a healing response in chronic injuries. It is highly effective for conditions like plantar fasciitis, IT band syndrome, rotator cuff injuries, and post-surgical scarring. ",
       cta: "Book Your IASTM Session",
     },
     description: "IASTM (Instrument Assisted Soft Tissue Mobilization) uses specially designed stainless steel tools to detect and treat scar tissue, fascial restrictions, and chronic soft tissue injuries. Available at Dr. Divya Sharma PhysioCentric clinic in South Delhi and Gurgaon.",
@@ -1162,7 +1162,7 @@ export const servicesDetailData = {
     hero: {
       headline: "TENS Therapy in South Delhi & Gurgaon",
       subheadline: "Drug-free pain relief through gentle electrical stimulation",
-      intro: "If you're looking for pain relief without relying only on medication, TENS therapy at PhysioCentric offers a safe, well-researched option that fits into a wider physiotherapy plan.",
+      intro: "TENS (Transcutaneous Electrical Nerve Stimulation) therapy delivers safe, low-voltage electrical currents to block pain signals and stimulate endorphin release — providing drug-free relief for acute and chronic pain conditions. It works by overriding pain signals traveling to the brain and triggering the release of the body's natural painkillers. It is effective for arthritis, back pain, sciatica, postsurgical pain, and neuropathic pain conditions. ",
       cta: "Book Your TENS Therapy Session",
     },
     description: "TENS (Transcutaneous Electrical Nerve Stimulation) therapy delivers safe, low-voltage electrical currents to block pain signals and stimulate endorphin release — providing drug-free relief for acute and chronic pain conditions across Delhi and Gurgaon.",
@@ -1206,7 +1206,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Ultrasonic Therapy in South Delhi & Gurgaon",
       subheadline: "Deep-tissue sound wave therapy for faster healing",
-      intro: "When inflammation sits deep in a tendon or ligament, surface treatments alone often aren't enough. Ultrasonic therapy at PhysioCentric reaches that depth to actively support the healing process.",
+      intro: "Therapeutic ultrasound is an electrotherapy treatment that uses sound waves to promote tissue healing and reduce pain. It delivers mechanical energy deep into soft tissues — tendons, muscles, and ligaments — producing thermal and non-thermal effects that accelerate the healing process. It is commonly used for tendinitis, bursitis, muscle tears, joint inflammation, and scar tissue remodeling. ",
       cta: "Book Your Ultrasonic Therapy Session",
     },
     description: "Therapeutic ultrasound therapy uses high-frequency sound waves to penetrate deep into tissues, reduce inflammation, promote healing, and relieve pain. Offered at Dr. Divya Sharma PhysioCentric clinic for patients across South Delhi and Gurgaon.",
@@ -1250,7 +1250,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Interferential Therapy in South Delhi & Gurgaon",
       subheadline: "Deep, comfortable pain relief for joints and muscles",
-      intro: "For pain that sits deep in a joint or muscle, interferential therapy at PhysioCentric delivers relief at a depth surface-level treatments often can't reach — comfortably and without medication.",
+      intro: "Interferential therapy It is an electrotherapy treatment used to reduce pain and improve healing. It works by crossing two medium-frequency currents within the body to produce a lowfrequency therapeutic effect at depth — without skin discomfort. During treatment, mild electrical currents are applied to the painful body area using electrode pads. The electrical impulses stimulate nerves and soft tissues, helping reduce inflammation and muscle tightness",
       cta: "Book Your IFT Session",
     },
     description: "Interferential therapy (IFT) uses medium-frequency electrical currents to penetrate deep into tissue for effective pain relief, swelling reduction, and muscle re-education — a trusted PhysioCentric modality at Dr. Divya Sharma clinic across Delhi and Gurgaon.",
@@ -1294,7 +1294,7 @@ export const servicesDetailData = {
     hero: {
       headline: "LASER Therapy in South Delhi & Gurgaon",
       subheadline: "Light-based healing for fast, drug-free pain relief",
-      intro: "LASER therapy at PhysioCentric uses focused light energy to trigger your body's own healing response, giving you a safe, non-invasive option for both fresh injuries and long-standing pain.",
+      intro: " LASER (Light Amplification by stimulated emission of radiation) relies on a process called photobiomodulation ( PBM) which uses a focused light to trigger cellular processes, reducing pain and inflammation while accelerating tissue repair. It is safe, non-invasive, and effective for a wide range of musculoskeletal conditions. ",
       cta: "Book Your LASER Therapy Session",
     },
     description: "High-intensity LASER therapy uses focused light energy to stimulate cellular repair, reduce inflammation, and provide fast, drug-free pain relief. Available at Dr. Divya Sharma PhysioCentric clinic for patients in South Delhi and Gurgaon.",
@@ -1338,7 +1338,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Sports Injury Rehab in South Delhi & Gurgaon",
       subheadline: "Recover fully and return to your sport with confidence",
-      intro: "An injury shouldn't just be about getting back to 'normal' — it should get you back to full performance. Dr. Divya Sharma designs sport-specific rehab programs that address the whole athlete, not just the injury site.",
+      intro: "Whether you’re a professional athlete, a weekend runner, or someone who enjoys staying active, a sports injury can disrupt your routine and keep you from doing what you love. Our sports injury rehabilitation program is designed to help you recover safely, relieve pain, restore movement and strength, and get you back to your sport or daily activities with confidence. Every rehabilitation plan is personalized to your injury, activity level, and goals. Your treatment may include hands-on therapy, guided exercises, movement training, and education to help you recover faster and reduce the risk of future injuries. Our goal is not just to help you heal, but to help you move better, regain your confidence, and safely return to the activities and sports you enjoy. ",
       cta: "Book Your Sports Rehab Assessment",
     },
     description: "Comprehensive sports injury rehabilitation for athletes of all levels in South Delhi and Gurgaon. From ACL tears to shoulder dislocations, Dr. Divya Sharma designs sport-specific recovery programs to get you back in the game safely and stronger than before.",
@@ -1382,7 +1382,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Tele Rehabilitation — Online Physiotherapy",
       subheadline: "Expert physiotherapy care from wherever you are",
-      intro: "Not everyone can make it to a clinic regularly, and that shouldn't mean lower-quality care. Through tele rehabilitation, Dr. Divya Sharma delivers the same clinical assessment and guidance over video, wherever you're based.",
+      intro: "The World Health Organization describes telehealth as the use of digital technologies to provide healthcare services over a distance. Telerehabilitation is a specialized branch of telehealth focused on rehabilitation. Telerehabilitation has become an important extension of physiotherapy practice, improving access and continuity of rehabilitation while complementing—not replacing—in-person care. It is particularly valuable for follow-up, exercise supervision, patient education, and chronic disease management, provided patient safety, privacy, and clinical appropriateness are maintained. ",
       cta: "Book Your Online Consultation",
     },
     description: "Expert online PhysioCentric consultations and guided rehabilitation sessions from the comfort of your home. Dr. Divya Sharma provides evidence-based tele rehab for patients across Delhi NCR, Gurgaon, and anywhere in India.",
@@ -1426,7 +1426,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Biomechanical Correction Rehab in South Delhi & Gurgaon",
       subheadline: "Fix the movement pattern behind your recurring pain",
-      intro: "If the same injury keeps happening in a different form, the real problem may be how you move, not just where it hurts. Biomechanical correction rehab at PhysioCentric gets to that root cause.",
+      intro: "Biomechanical Correction Rehabilitation is a patient-centered, evidence-informed approach that focuses on correcting abnormal movement patterns and restoring optimal biomechanics. By combining assessment, manual therapy, therapeutic exercise, neuromuscular training, and patient education, it helps reduce pain, improve function, enhance performance, and prevent recurrence of musculoskeletal injuries. It is widely used in orthopedic, sports, neurological, and occupational rehabilitation. ",
       cta: "Book Your Biomechanical Assessment",
     },
     description: "Advanced biomechanical assessment and corrective rehabilitation to identify and fix faulty movement patterns that cause pain, injury, and poor performance. Available at Dr. Divya Sharma clinic for athletes and active patients in South Delhi and Gurgaon.",
@@ -1470,7 +1470,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Movement Assessment in South Delhi & Gurgaon",
       subheadline: "Understand your body before an injury forces you to",
-      intro: "A movement assessment at PhysioCentric identifies weaknesses and imbalances before they turn into pain, giving you a clear, personalized starting point for any rehab or fitness goal.",
+      intro: "Every effective treatment begins with understanding how your body moves. At PhysioCentric, our comprehensive Movement Assessment is designed to identify movement restrictions, muscle imbalances, joint limitations, and faulty movement patterns before they develop into persistent pain or injury.Rather than focusing only on where it hurts, our physiotherapists evaluate how your entire body functions during everyday movements. This detailed assessment helps uncover the underlying cause of discomfort, allowing us to create a personalised treatment and exercise plan tailored to your goals.Whether you're recovering from an injury, returning to sports, managing chronic pain, or simply looking to move better, a Movement Assessment provides the foundation for safer rehabilitation, improved performance, and long-term musculoskeletal health—helping you build strength, prevent future injuries, and move with confidence.",
       cta: "Book Your Movement Assessment",
     },
     description: "Comprehensive functional movement screening and assessment to uncover mobility restrictions, strength imbalances, and injury risk factors — the essential starting point for any effective PhysioCentric or sports performance program in Delhi and Gurgaon.",
@@ -1514,7 +1514,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Functional Training in South Delhi & Gurgaon",
       subheadline: "Strength and mobility that works in real life",
-      intro: "Functional training at PhysioCentric bridges the gap between finishing rehab and returning to full, active living, training movement patterns you actually use every day.",
+      intro: " Functional training bridges the gap between rehabilitation and performance. Rather than training muscles in isolation, it is designed to build real-world strength, mobility, coordination, and endurance that directly transfer to daily life and sport — improving your ability to squat, lift, push, pull, rotate, and move with confidence and control. Ideal for post-rehabilitation patients, athletes,  and health-conscious individuals. ",
       cta: "Book Your Functional Training Session",
     },
     description: "Goal-oriented functional training programs designed to build real-world strength, mobility, coordination, and endurance. Ideal for post-rehabilitation patients, athletes, and health-conscious individuals across South Delhi and Gurgaon.",
@@ -1558,7 +1558,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Pelvic Floor Rehabilitation in South Delhi & Gurgaon",
       subheadline: "Restore pelvic strength and control, comfortably and privately",
-      intro: "Pelvic floor issues are common but rarely talked about. At PhysioCentric, Dr. Divya Sharma provides a private, respectful space to assess and treat pelvic pain, weakness, and dysfunction with proven, non-surgical methods.",
+      intro: "Pelvic floor rehabilitation is a specialized physiotherapy domain that helps restore the strength, flexibility, and coordination of the pelvic floor muscles. These muscles play a vital role in supporting the bladder, bowel, and reproductive organs while contributing to core stability and overall pelvic health. Using a personalized treatment approach such as therapeutic exercises, manual therapy, biofeedback, breathing techniques, and lifestyle guidance, pelvic floor rehabilitation can help reduce symptoms, improve function, and enhance quality of life. Whether you’re recovering from childbirth, surgery, or managing a long-standing pelvic health condition, our physiotherapists provide evidencebased, individualized care to help you regain confidence, improve function, and return to your daily activities comfortably. ",
       cta: "Book a Confidential Pelvic Floor Consultation",
     },
     description: "Comprehensive pelvic floor PhysioCentric for pain, weakness, prolapse, and dysfunction in women and men. Evidence-based, non-invasive treatment to restore pelvic health and improve quality of life — available at Dr. Divya Sharma clinic in South Delhi and Gurgaon.",
@@ -1602,7 +1602,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Gait Training in South Delhi & Gurgaon",
       subheadline: "Walk safer, steadier, and with less pain",
-      intro: "An abnormal walking pattern often signals weakness or compensation elsewhere in the body. Dr. Divya Sharma's gait training program identifies the exact cause and retrains a safer, more efficient walk.",
+      intro: " Gait Training An abnormal walking pattern often signals weakness or compensation elsewhere in the body. A comprehensive gait training program relies on a foundational understanding of normal walking biomechanics (such as the stance and swing phases) and careful assessment of any deviations followed by targeted interventions — including strengthening, balance training, and movement re-education — to normalize walking patterns. Ideal for individuals with injury, post surgery and neurologically impaired patients. ",
       cta: "Book Your Gait Analysis",
     },
     description: "Specialist gait analysis and retraining to correct abnormal walking patterns caused by neurological conditions, injury, surgery, or muscle weakness. Helping patients in South Delhi and Gurgaon walk better, safer, and with greater confidence.",
@@ -1646,7 +1646,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Joint Mobilisation in South Delhi & Gurgaon",
       subheadline: "Gentle, precise techniques to restore joint movement",
-      intro: "Stiff, aching joints can quietly limit your daily activities. Joint mobilisation at PhysioCentric uses graded, hands-on techniques to safely restore movement, whether the cause is arthritis, injury, or post-surgical tightness.",
+      intro: " Joint mobilisation Joint mobilization is an evidence-based manual therapy technique used by physiotherapists to relieve pain, restore normal arthrokinematic (joint surface) motion and improve function. When combined with exercise therapy, strengthening, and movement retraining, it plays an important role in the rehabilitation of musculoskeletal conditions. It should always be performed after a thorough assessment and with appropriate consideration of indications and contraindications. ",
       cta: "Book Your Joint Mobilisation Session",
     },
     description: "Skilled joint mobilisation therapy to restore normal joint movement, reduce stiffness, and relieve pain caused by arthritis, injury, or post-surgical tightness. Expert PhysioCentric for patients across South Delhi and Gurgaon.",
@@ -1690,7 +1690,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Pressure Biofeedback Core Training in South Delhi & Gurgaon",
       subheadline: "Train the right core muscles, with proof it's working",
-      intro: "Most people doing 'core exercises' are actually activating the wrong muscles. Pressure biofeedback training at PhysioCentric gives you real-time proof that you're engaging the deep stabilizers that truly protect your spine.",
+      intro: " Pressure Biofeedback is a tool designed to facilitate muscle re-education by detecting movement of the lumbar spine associated with a deep abdominal contraction in relation to an air-filled reservoir. It provides real-time feedback to ensure precise activation of the deep spinal stabilizers responsible for true core stability — the foundation for pain-free movement and injury prevention. Ideal for back pain, pelvic floor rehab, and athletic performance. ",
       cta: "Book Your Core Training Session",
     },
     description: "Precision core rehabilitation using pressure biofeedback technology to accurately activate deep stabilizing muscles — transversus abdominis and multifidus — for a strong, stable spine. Ideal for back pain, pelvic floor rehab, and athletic performance.",
@@ -1734,7 +1734,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Balance Training in South Delhi & Gurgaon",
       subheadline: "Rebuild stability, reduce fall risk, move with confidence",
-      intro: "Balance quietly declines after injury, surgery, or with age, often without people noticing until a near-fall happens. PhysioCentric's balance training rebuilds that stability before it becomes a safety concern.",
+      intro: "Balance is a complex skill involving vision, inner ear function, and proprioception. After injury, surgery, or neurological events, balance often deteriorates, targeted balance and proprioception training is essential to reduce fall risk, improve stability, and restore confidence in movement. It is ideal for elderly patients, post-injury patients, and neurological conditions.  ",
       cta: "Book Your Balance Assessment",
     },
     description: "Targeted balance and proprioception training to reduce fall risk, improve stability, and restore confidence in movement. Essential for seniors, post-injury patients, and neurological conditions — available at Dr. Divya Sharma clinic across Delhi and Gurgaon.",
@@ -1782,7 +1782,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Physiotherapist in South Delhi & Gurgaon",
       subheadline: "Accurate diagnosis, personalized treatment, real results",
-      intro: "Choosing the right physiotherapist matters as much as the treatment itself. Dr. Divya Sharma combines thorough assessment with evidence-based care to get to the actual cause of your pain, not just the symptoms.",
+      intro: "Choosing the right physiotherapist is the first step towards lasting recovery. At PhysioCentric, Dr. Divya Sharma combines detailed clinical assessment with evidence-based physiotherapy to identify the true source of your pain, delivering personalised treatment that promotes faster recovery, better movement, and long-term results—not just temporary relief.",
       cta: "Book a Consultation with Dr. Divya Sharma",
     },
     description: "Looking for a trusted physiotherapist in South Delhi or Gurgaon? Dr. Divya Sharma is a highly experienced, certified physiotherapist providing expert diagnosis and personalized treatment for pain, injury, mobility issues, and rehabilitation across Delhi NCR.",
@@ -1847,7 +1847,7 @@ export const servicesDetailData = {
     hero: {
       headline: "Physiotherapy Centre in South Delhi & Gurgaon",
       subheadline: "One clinic, the full range of expert physiotherapy care",
-      intro: "PhysioCentric brings together advanced equipment and clinical expertise under one roof, so you don't need to visit multiple places to get complete, coordinated care for your condition.",
+      intro: "At PhysioCentric, advanced technology meets expert physiotherapy to deliver complete, evidence-based care under one roof. Every treatment is carefully planned to ensure accurate diagnosis, faster recovery, and long-term results—without the need to visit multiple clinics.",
       cta: "Visit PhysioCentric Today",
     },
     description: "Dr. Divya Sharma's physiotherapy centre in South Delhi and Gurgaon is a leading clinic offering advanced, evidence-based physiotherapy for musculoskeletal, sports, neurological, and women's health conditions. Trusted by patients across Delhi NCR for expert, personalised care.",

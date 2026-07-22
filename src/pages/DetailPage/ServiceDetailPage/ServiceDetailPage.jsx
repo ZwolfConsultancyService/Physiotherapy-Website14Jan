@@ -687,12 +687,12 @@ const ServiceDetailPage = () => {
                     {serviceData.hero.intro}
                   </p>
                 )}
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
+                {/* <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
                   {serviceData.description}
                 </p>
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                   {serviceData.longDescription}
-                </p>
+                </p> */}
               </div>
 
               {/* Why This Service Matters */}
