@@ -748,10 +748,21 @@ export default function DoctorsPage() {
               return (
                 <div
                   key={i}
-                  className="group w-full"
+                  className="group w-full cursor-pointer"
                   style={{ perspective: "1200px" }}
                   onMouseEnter={() => setFlip(i, true)}
                   onMouseLeave={() => setFlip(i, false)}
+                  onClick={() => setFlip(i, !isFlipped)}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isFlipped}
+                  aria-label={`${doc.name}, ${doc.role}. Tap to ${isFlipped ? "show photo" : "show details"}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setFlip(i, !isFlipped);
+                    }
+                  }}
                 >
                   <div
                     className="relative w-full transition-transform duration-700"
