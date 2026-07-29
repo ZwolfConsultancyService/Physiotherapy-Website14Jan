@@ -94,7 +94,7 @@ const LocationDetailPage = () => {
           description: locationData.metaDescription,
           url: `https://physiocentric.com/service/${slug}`,
           telephone: "1800-456-7890",
-          email: "info@physiocentric.com",
+          email: "reception.physiocentric@gmail.com",
           address: {
             "@type": "PostalAddress",
             addressLocality: locationData.name,

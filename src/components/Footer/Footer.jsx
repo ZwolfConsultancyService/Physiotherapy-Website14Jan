@@ -131,15 +131,29 @@ export default function Footer() {
               </a>
 
               {/* Address */}
-              <div className="flex items-start gap-3 text-gray-400">
-                <div className="w-8 h-8 border border-gray-700 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={14} />
-                </div>
-                <span className="text-sm pt-1 leading-relaxed">
-                  A-2, Block A, Gulmohar Park,<br />
-                  New Delhi, Delhi 110049
-                </span>
-              </div>
+            <div className="flex items-start gap-3 text-gray-400">
+  <div className="w-8 h-8 border border-gray-700 flex items-center justify-center flex-shrink-0">
+    <MapPin size={14} />
+  </div>
+
+  <div className="text-sm pt-1 leading-relaxed">
+    <p className="font-medium text-white mb-1">Delhi Clinic</p>
+    <p>
+      A-2, Block A, Gulmohar Park,<br />
+      New Delhi, Delhi 110049
+    </p>
+
+    <div className="mt-4">
+      <p className="font-medium text-white mb-1">Gurgaon Clinic</p>
+      <p>
+        Physiocentric<br />
+        11, Market Road, Basement,<br />
+        Behind Arjun Marg Shopping Mall,<br />
+        DLF Phase 1, Gurgaon
+      </p>
+    </div>
+  </div>
+</div>
 
               {/* Hours */}
               <div className="flex items-start gap-3 text-gray-400">
@@ -147,7 +161,7 @@ export default function Footer() {
                   <Clock size={14} />
                 </div>
                 <div className="text-sm pt-1 leading-relaxed">
-                  <p>Mon–Sat: 10am – 7pm</p>
+                  <p>Mon–Sat: 09am – 7pm</p>
                   <p className="text-gray-600">Sun: Closed</p>
                 </div>
               </div>

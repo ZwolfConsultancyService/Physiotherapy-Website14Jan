@@ -142,7 +142,7 @@ export default function ContactPage() {
         <title>Book Appointment – PhysioCentric | Physiotherapy Clinic New Delhi</title>
         <meta
           name="description"
-          content="Book a physiotherapy appointment at PhysioCentric, Gulmohar Park, New Delhi. Call 09810513841 or fill our online form. Mon–Sat, 10AM–7PM."
+          content="Book a physiotherapy appointment at PhysioCentric, Gulmohar Park, New Delhi. Call 09810513841 or fill our online form. Mon–Sat, 09AM–7PM."
         />
         <meta
           name="keywords"
@@ -193,7 +193,7 @@ export default function ContactPage() {
                 "name": "PhysioCentric",
                 "url": "https://www.physiocentric.in",
                 "telephone": "+919810513841",
-                "email": "info@physiocentric.com",
+                "email": "reception.physiocentric@gmail.com",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "A-2, Block A, Gulmohar Park",
@@ -380,13 +380,13 @@ export default function ContactPage() {
         >
           {[
             { icon: Phone, label: "Call Us", lines: ["098105 13841"] },
-            { icon: Mail, label: "Email", lines: ["info@physiocentric.com"] },
+            { icon: Mail, label: "Email", lines: ["reception.physiocentric@gmail.com"] },
             {
               icon: MapPin,
               label: "Location",
               lines: ["A-2, Block A, Gulmohar Park", "New Delhi, Delhi 110049"],
             },
-            { icon: Clock, label: "Hours", lines: ["Mon–Sat: 10am – 7pm", "Sun: Closed"] },
+            { icon: Clock, label: "Hours", lines: ["Mon–Sat: 09am – 7pm", "Sun: Closed"] },
           ].map((item, i) => (
             <div
               key={i}

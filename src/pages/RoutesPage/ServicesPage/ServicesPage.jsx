@@ -185,14 +185,14 @@ const ServicesPage = () => {
                 aria-label={`View details for ${service.title}`}
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-80 md:h-96 overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={`${service.title} – physiotherapy service at PhysioCentric New Delhi`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                     width={400}
-                    height={256}
+                    height={384}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
 
