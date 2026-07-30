@@ -122,15 +122,7 @@ export default function ContactPage() {
   });
 
   return (
-    <div
-      className="pc-contact"
-      style={{
-        fontFamily: "'IBM Plex Sans', sans-serif",
-        background: "#fff",
-        minHeight: "100vh",
-        color: "#000",
-      }}
-    >
+    <div className="pc-contact">
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -235,7 +227,16 @@ export default function ContactPage() {
       </Helmet>
 
       <style>{`
-        .pc-contact * { box-sizing: border-box; }
+        .pc-contact, .pc-contact * { box-sizing: border-box; }
+        .pc-contact {
+          font-family: 'IBM Plex Sans', sans-serif;
+          background: #fff;
+          min-height: 100vh;
+          color: #000;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
         .pc-contact .serif { font-family: 'Fraunces', serif; }
         .pc-contact .mono { font-family: 'IBM Plex Mono', monospace; }
         .pc-contact input::placeholder,
@@ -244,26 +245,89 @@ export default function ContactPage() {
         .pc-contact textarea:focus,
         .pc-contact select:focus { border-color: #000 !important; box-shadow: 0 0 0 1px #000; }
         .pc-contact input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: pointer; filter: invert(1); }
-        .pc-contact .info-card { border-bottom: 2px solid #000; }
-        @media (min-width: 640px) {
-          .pc-contact .info-card { border-bottom: none; border-right: 1px solid #e5e7eb; }
-          .pc-contact .info-card:last-child { border-right: none; }
+
+        /* ── Hero ── */
+        .pc-hero {
+          position: relative;
+          height: 320px;
+          background: #000;
+          overflow: hidden;
         }
+        .pc-hero-inner {
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 24px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding-bottom: 48px;
+        }
+
+        /* ── Info cards ── */
+        .pc-info-wrap { border-bottom: 1px solid #e5e7eb; background: #fafafa; }
+        .pc-info-grid {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+        .info-card {
+          padding: 24px 20px;
+          background: #fff;
+          border-bottom: 2px solid #000;
+        }
+        @media (min-width: 640px) {
+          .info-card { border-bottom: none; border-right: 1px solid #e5e7eb; }
+          .info-card:last-child { border-right: none; }
+        }
+
+        /* ── Main layout ── */
+        .pc-main-container { max-width: 1200px; margin: 0 auto; padding: 48px 24px 80px; }
+        .grid-main { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+        .grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .pc-form-inner { padding: 36px 32px; }
+        .pc-cta {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 20px;
+          padding: 16px 20px;
+          border-radius: 4px;
+          background: #000;
+          color: #fff;
+          text-decoration: none;
+          border: 1px solid #000;
+          transition: background 0.2s;
+        }
+
+        /* ── Responsive breakpoints ── */
         @media (max-width: 820px) {
-          .pc-contact .grid-main { grid-template-columns: 1fr !important; }
-          .pc-contact .grid-two { grid-template-columns: 1fr !important; }
+          .grid-main { grid-template-columns: 1fr !important; gap: 32px; }
+        }
+        @media (max-width: 640px) {
+          .grid-two { grid-template-columns: 1fr !important; gap: 14px; }
+        }
+        @media (max-width: 600px) {
+          .pc-hero { height: 240px; }
+          .pc-hero-inner { padding: 0 16px; padding-bottom: 28px; }
+          .pc-main-container { padding: 32px 16px 56px; }
+          .pc-form-inner { padding: 24px 18px; }
+          .pc-info-grid { grid-template-columns: repeat(2, 1fr); }
+          .info-card { padding: 18px 14px; }
+          .pc-cta { padding: 14px 16px; gap: 12px; }
+        }
+        @media (max-width: 400px) {
+          .pc-info-grid { grid-template-columns: repeat(2, 1fr); }
+          .info-card { padding: 16px 12px; }
+          .pc-form-inner { padding: 20px 14px; }
         }
       `}</style>
 
       {/* ─── HERO ─── */}
-      <div
-        style={{
-          position: "relative",
-          height: "320px",
-          background: "#000",
-          overflow: "hidden",
-        }}
-      >
+      <div className="pc-hero">
         <img
           src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&h=640&fit=crop"
           alt="PhysioCentric contact and appointment booking"
@@ -297,20 +361,7 @@ export default function ContactPage() {
           }}
           aria-hidden="true"
         />
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 24px",
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
-            paddingBottom: "48px",
-          }}
-        >
+        <div className="pc-hero-inner">
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
             <span style={{ width: "40px", height: "2px", background: "#fff" }} aria-hidden="true" />
             <span
@@ -329,7 +380,7 @@ export default function ContactPage() {
           <h1
             style={{
               fontFamily: "'Fraunces', serif",
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              fontSize: "clamp(1.9rem, 8vw, 3.5rem)",
               fontWeight: 600,
               color: "#fff",
               margin: 0,
@@ -369,15 +420,8 @@ export default function ContactPage() {
       </div>
 
       {/* ─── INFO CARDS ─── */}
-      <div style={{ borderBottom: "1px solid #e5e7eb", background: "#fafafa" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-          }}
-        >
+      <div className="pc-info-wrap">
+        <div className="pc-info-grid">
           {[
             { icon: Phone, label: "Call Us", lines: ["098105 13841"] },
             { icon: Mail, label: "Email", lines: ["reception.physiocentric@gmail.com"] },
@@ -388,34 +432,26 @@ export default function ContactPage() {
             },
             { icon: Clock, label: "Hours", lines: ["Mon–Sat: 09am – 7pm", "Sun: Closed"] },
           ].map((item, i) => (
-            <div
-              key={i}
-              className="info-card"
-              style={{
-                padding: "24px 20px",
-                background: "#fff",
-                borderBottom: i === 3 ? "2px solid #000" : "none",
-              }}
-            >
+            <div key={i} className="info-card">
               <div
                 style={{
-                  width: "40px",
-                  height: "40px",
+                  width: "36px",
+                  height: "36px",
                   borderRadius: "50%",
                   background: "#f1f1f1",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: "14px",
+                  marginBottom: "12px",
                 }}
                 aria-hidden="true"
               >
-                <item.icon size={18} style={{ color: "#000" }} strokeWidth={1.5} />
+                <item.icon size={16} style={{ color: "#000" }} strokeWidth={1.5} />
               </div>
               <div
                 style={{
                   fontSize: "10px",
-                  letterSpacing: "2.5px",
+                  letterSpacing: "2px",
                   textTransform: "uppercase",
                   color: "#6b7280",
                   fontWeight: 600,
@@ -426,7 +462,15 @@ export default function ContactPage() {
                 {item.label}
               </div>
               {item.lines.map((line, j) => (
-                <div key={j} style={{ fontSize: "14px", color: "#000", lineHeight: 1.7 }}>
+                <div
+                  key={j}
+                  style={{
+                    fontSize: "13px",
+                    color: "#000",
+                    lineHeight: 1.6,
+                    wordBreak: "break-word",
+                  }}
+                >
                   {line}
                 </div>
               ))}
@@ -436,11 +480,8 @@ export default function ContactPage() {
       </div>
 
       {/* ─── MAIN GRID ─── */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "48px 24px 80px" }}>
-        <div
-          className="grid-main"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "48px" }}
-        >
+      <div className="pc-main-container">
+        <div className="grid-main">
           {/* LEFT */}
           <div>
             <div style={{ marginBottom: "28px" }}>
@@ -462,7 +503,7 @@ export default function ContactPage() {
               <h2
                 style={{
                   fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+                  fontSize: "clamp(1.3rem, 5vw, 1.9rem)",
                   fontWeight: 600,
                   color: "#000",
                   margin: "0 0 10px",
@@ -489,7 +530,7 @@ export default function ContactPage() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17279.444892527215!2d77.19908151661608!3d28.546738155120085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c2bae79c4b%3A0x8c6cf571e1cd86ce!2sPhysioCentric!5e0!3m2!1sen!2sin!4v1777618165437!5m2!1sen!2sin"
                 width="100%"
                 height="280"
-                style={{ border: 0, display: "block" }}
+                style={{ border: 0, display: "block", maxWidth: "100%" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -505,7 +546,7 @@ export default function ContactPage() {
                   borderTop: "1px solid #e5e7eb",
                 }}
               >
-                <MapPin size={14} style={{ color: "#000" }} />
+                <MapPin size={14} style={{ color: "#000", flexShrink: 0 }} />
                 <address
                   style={{
                     fontSize: "12px",
@@ -523,26 +564,14 @@ export default function ContactPage() {
             <a
               href="tel:09810513841"
               aria-label="Call PhysioCentric at 09810513841"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "16px",
-                marginTop: "20px",
-                padding: "16px 20px",
-                borderRadius: "4px",
-                background: "#000",
-                color: "#fff",
-                textDecoration: "none",
-                transition: "background 0.2s",
-                border: "1px solid #000",
-              }}
+              className="pc-cta"
               onMouseEnter={(e) => (e.currentTarget.style.background = "#333")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#000")}
             >
               <div
                 style={{
-                  width: "44px",
-                  height: "44px",
+                  width: "40px",
+                  height: "40px",
                   borderRadius: "50%",
                   border: "1px solid rgba(255,255,255,0.2)",
                   display: "flex",
@@ -552,9 +581,9 @@ export default function ContactPage() {
                 }}
                 aria-hidden="true"
               >
-                <Phone size={18} style={{ color: "#fff" }} />
+                <Phone size={17} style={{ color: "#fff" }} />
               </div>
-              <div>
+              <div style={{ minWidth: 0 }}>
                 <div
                   style={{
                     fontSize: "10px",
@@ -567,9 +596,11 @@ export default function ContactPage() {
                 >
                   Call Direct
                 </div>
-                <div style={{ fontSize: "18px", fontWeight: 600 }}>09810513841</div>
+                <div style={{ fontSize: "16px", fontWeight: 600, whiteSpace: "nowrap" }}>
+                  09810513841
+                </div>
               </div>
-              <ArrowRight size={20} style={{ marginLeft: "auto", opacity: 0.5 }} />
+              <ArrowRight size={18} style={{ marginLeft: "auto", opacity: 0.5, flexShrink: 0 }} />
             </a>
           </div>
 
@@ -584,7 +615,7 @@ export default function ContactPage() {
             }}
           >
             <div style={{ height: "4px", background: "#000" }} aria-hidden="true" />
-            <div style={{ padding: "36px 32px" }}>
+            <div className="pc-form-inner">
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
                 <span style={{ width: "28px", height: "2px", background: "#000" }} aria-hidden="true" />
                 <span
@@ -603,7 +634,7 @@ export default function ContactPage() {
               <h2
                 style={{
                   fontFamily: "'Fraunces', serif",
-                  fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+                  fontSize: "clamp(1.3rem, 5vw, 1.9rem)",
                   fontWeight: 600,
                   color: "#000",
                   margin: "0 0 6px",
@@ -611,7 +642,7 @@ export default function ContactPage() {
               >
                 Book an <span style={{ fontStyle: "italic" }}>Appointment</span>
               </h2>
-              <p style={{ fontSize: "14px", color: "#6b7280", margin: "0 0 28px" }}>
+              <p style={{ fontSize: "14px", color: "#6b7280", margin: "0 0 24px" }}>
                 Fill in your details — we'll confirm within 24 hours.
               </p>
 
@@ -685,10 +716,7 @@ export default function ContactPage() {
                   </InputWrap>
                 </Field>
 
-                <div
-                  className="grid-two"
-                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}
-                >
+                <div className="grid-two">
                   <Field label="Email" required error={errors.email}>
                     <InputWrap icon={Mail}>
                       <input
@@ -719,10 +747,7 @@ export default function ContactPage() {
                   </Field>
                 </div>
 
-                <div
-                  className="grid-two"
-                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}
-                >
+                <div className="grid-two">
                   <Field label="Preferred Date" required error={errors.preferredDate}>
                     <InputWrap icon={Calendar}>
                       <input
@@ -955,11 +980,14 @@ function Spinner() {
   );
 }
 
-// Inject keyframes for spinner
-const styleSheet = document.createElement("style");
-styleSheet.textContent = `
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-`;
-document.head.appendChild(styleSheet);
+// Inject keyframes for spinner (guard against duplicate injection on re-render)
+if (typeof document !== "undefined" && !document.getElementById("pc-spin-keyframes")) {
+  const styleSheet = document.createElement("style");
+  styleSheet.id = "pc-spin-keyframes";
+  styleSheet.textContent = `
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(styleSheet);
+}
