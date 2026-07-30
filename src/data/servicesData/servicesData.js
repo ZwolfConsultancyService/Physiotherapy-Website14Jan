@@ -193,13 +193,13 @@
 //     image: pressure,
 //     description: "Precision core training using pressure biofeedback to activate deep stabilizing muscles, correct movement dysfunction, and build a strong, injury-resistant core.",
 //   },
-//   // {
-//   //   id: 24,
-//   //   title: "Sports Massage",
-//   //   slug: "sports-massage",
-//   //   image: massage,
-//   //   description: "Professional sports massage therapy for muscle recovery, performance enhancement, and injury prevention. Trusted by athletes and active individuals across Delhi and Gurgaon.",
-//   // },
+  // {
+  //   id: 24,
+  //   title: "Sports Massage",
+  //   slug: "sports-massage",
+  //   image: massage,
+  //   description: "Professional sports massage therapy for muscle recovery, performance enhancement, and injury prevention. Trusted by athletes and active individuals across Delhi and Gurgaon.",
+  // },
 //   {
 //     id: 25,
 //     title: "Balance Training",
@@ -762,8 +762,10 @@ import balance from '../../assets/services/balance.jpeg'
 import head from '../../assets/teamfolder/head.jpeg'
 import aboutsection from '../../assets/aboutsection.png'
 import tap from '../../assets/services/tap.jpeg'
+import sportsMassage from '../../assets/services/sportsMassage.jpeg'
 
-// ==================== SERVICES DATA (card / listing view) ====================
+
+// ==================== SERVICES DATA (card / listing view)  sportsMassage ====================
 export const servicesData = [
   { id: 1, title: "Manual Muscle Therapy", slug: "manual-muscle-therapy", image: image, description: "Expert hands-on muscle therapy in South Delhi & Gurgaon. Relieves chronic pain, muscle tightness, and improves mobility through targeted manual techniques." },
   { id: 2, title: "Kinesiotaping", slug: "kinesiotaping", image: tap, description: "Professional kinesiotaping therapy for pain relief, muscle support, and injury recovery. Trusted by athletes and patients across Defence Colony, DLF, and Hauz Khas." },
@@ -787,6 +789,13 @@ export const servicesData = [
   { id: 25, title: "Balance Training", slug: "balance-training", image: balance, description: "Targeted balance and proprioception training to reduce fall risk, improve stability, and restore confidence in movement. Essential for seniors, post-injury, and neurological patients." },
   { id: 27, title: "Physiotherapist", slug: "physiotherapist", image: head, description: "Consult an experienced physiotherapist in South Delhi & Gurgaon. Dr. Divya Sharma provides expert diagnosis and personalized treatment for pain, injury, and rehabilitation." },
   { id: 28, title: "Physiotherapy Centre", slug: "physiotherapy-centre", image: aboutsection, description: "Leading physiotherapy centre in South Delhi & Gurgaon offering advanced, evidence-based care for musculoskeletal, sports, neurological, and women's health conditions." },
+    {
+    id: 29,
+    title: "Sports Massage",
+    slug: "sports-massage",
+    image: sportsMassage,
+    description: "Professional sports massage therapy for muscle recovery, performance enhancement, and injury prevention. Trusted by athletes and active individuals across Delhi and Gurgaon.",
+  },
 ];
 
 // ==================== LOCATIONS DATA ====================
@@ -1896,7 +1905,167 @@ export const servicesDetailData = {
     internalLinks: ["physiotherapist", "sports-injury-rehab", "pelvic-floor-rehabilitation", "manual-muscle-therapy"],
     sidebar: { services: ["Physiotherapy Centre", "Physiotherapist", "Manual Muscle Therapy", "Dry Needling", "LASER Therapy", "Sports Injury Rehab", "Pelvic Floor Rehabilitation", "Gait Training", "Functional Training", "Balance Training"] },
   },
+  "sports-massage": {
+  id: 29,
+  title: "Sports Massage",
+  slug: "sports-massage",
+
+  bannerImage: sportsMassage,
+  mainImage: sportsMassage,
+  benefitImage: sportsMassage,
+
+  seo: {
+    metaTitle: "Sports Massage Therapy in South Delhi & Gurgaon | PhysioCentric",
+    metaDescription:
+      "Professional Sports Massage Therapy at PhysioCentric helps athletes recover faster, reduce muscle soreness, prevent injuries, and improve performance. Available in South Delhi & Gurgaon.",
+    urlSlug: "/service/sports-massage",
+  },
+
+  hero: {
+    headline: "Sports Massage Therapy in South Delhi & Gurgaon",
+    subheadline: "Recover Faster. Perform Better. Stay Injury-Free.",
+    intro:
+      "Sports Massage is a specialized form of manual therapy designed for athletes, fitness enthusiasts, and active individuals. It helps relieve muscle tension, improve flexibility, accelerate recovery after training, and reduce the risk of sports-related injuries. Whether you're preparing for an event or recovering after intense physical activity, our expert physiotherapists customize every session to your body's needs.",
+    cta: "Book Your Sports Massage Session",
+  },
+
+  description:
+    "Professional sports massage therapy to reduce muscle tightness, improve flexibility, speed up recovery, and enhance athletic performance for athletes and active individuals.",
+
+  longDescription:
+    "Sports Massage combines deep tissue techniques, stretching, trigger point therapy, and soft tissue mobilization to improve circulation, reduce muscle fatigue, and restore optimal movement. It is suitable before competitions, after intense workouts, or as part of an ongoing injury prevention program.",
+
+  whyMatters:
+    "Regular sports massage reduces muscle stiffness, improves blood circulation, minimizes delayed onset muscle soreness (DOMS), and helps maintain peak physical performance while lowering the risk of injury.",
+
+  whoNeedsThis: [
+    "Professional and amateur athletes",
+    "Gym-goers and fitness enthusiasts",
+    "Runners, cyclists, and swimmers",
+    "People recovering from sports injuries",
+    "Individuals experiencing muscle tightness or soreness",
+    "Anyone with repetitive strain from physical activity",
+  ],
+
+  benefits: {
+    title: "Benefits of Sports Massage",
+    description:
+      "Enhance recovery, improve flexibility, and optimize physical performance.",
+    points: [
+      "Reduces muscle soreness and stiffness",
+      "Speeds up recovery after training or competition",
+      "Improves flexibility and range of motion",
+      "Enhances blood circulation",
+      "Helps prevent sports injuries",
+      "Relieves muscle knots and trigger points",
+      "Boosts athletic performance",
+      "Promotes relaxation and reduces stress",
+    ],
+  },
+
+  process: [
+    {
+      title: "Physical Assessment",
+      description:
+        "Our physiotherapist evaluates your activity level, muscle tightness, movement restrictions, and recovery needs.",
+    },
+    {
+      title: "Targeted Sports Massage",
+      description:
+        "Specialized massage techniques are applied to release muscle tension, improve circulation, and restore mobility.",
+    },
+    {
+      title: "Stretching & Mobility Work",
+      description:
+        "Guided stretching and mobility exercises are added to improve flexibility and reduce injury risk.",
+    },
+    {
+      title: "Recovery Advice",
+      description:
+        "You'll receive personalized recovery strategies, hydration advice, and exercise recommendations for long-term performance.",
+    },
+  ],
+
+  whyChoose: {
+    title: "Why Choose Us",
+    points: [
+      {
+        title: "Experienced Sports Physiotherapists",
+        description:
+          "Specialized knowledge in sports rehabilitation and performance recovery.",
+      },
+      {
+        title: "Personalized Treatment Plans",
+        description:
+          "Every session is tailored according to your sport, training intensity, and recovery goals.",
+      },
+      {
+        title: "Evidence-Based Techniques",
+        description:
+          "Combining sports massage, trigger point therapy, stretching, and rehabilitation exercises.",
+      },
+      {
+        title: "Serving South Delhi & Gurgaon",
+        description:
+          "Trusted physiotherapy clinic providing advanced recovery solutions for athletes and active individuals.",
+      },
+    ],
+  },
+
+  faqs: [
+    {
+      question: "Who should get a sports massage?",
+      answer:
+        "Sports massage is suitable for athletes, gym-goers, runners, cyclists, fitness enthusiasts, and anyone experiencing muscle tightness from physical activity.",
+    },
+    {
+      question: "Does sports massage help muscle recovery?",
+      answer:
+        "Yes. It improves blood circulation, reduces muscle soreness, and accelerates recovery after intense exercise or competition.",
+    },
+    {
+      question: "Can sports massage prevent injuries?",
+      answer:
+        "Regular sports massage helps maintain muscle flexibility, reduces tightness, and lowers the risk of strains and overuse injuries.",
+    },
+    {
+      question: "Is sports massage painful?",
+      answer:
+        "Some deep tissue techniques may cause mild discomfort, but treatment is always adjusted according to your comfort level.",
+    },
+    {
+      question: "How often should I get a sports massage?",
+      answer:
+        "It depends on your training schedule. Active athletes often benefit from sessions every 2–4 weeks or before and after major events.",
+    },
+    {
+      question: "Can sports massage improve athletic performance?",
+      answer:
+        "Yes. Better muscle mobility, faster recovery, and reduced fatigue contribute to improved physical performance.",
+    },
+  ],
+
+  ctaText:
+    "Recover faster, move better, and perform at your best with expert Sports Massage Therapy at PhysioCentric.",
+
+  internalLinks: [
+    "manual-therapy",
+    "dry-needling",
+    "cupping-therapy",
+    "exercise-therapy",
+  ],
+
+  sidebar: {
+    services: [
+      "Sports Massage",
+      "Manual Therapy",
+      "Dry Needling",
+      "Exercise Therapy",
+    ],
+  },
+},
 };
+
 
 // ==================== CAROUSEL SERVICES DATA ====================
 export const carouselServicesData = [

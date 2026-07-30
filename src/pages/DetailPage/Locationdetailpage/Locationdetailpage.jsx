@@ -158,13 +158,13 @@ const LocationDetailPage = () => {
             <main className="lg:col-span-9 order-1 lg:order-2 space-y-6 md:space-y-8">
 
               {/* Main Image */}
-              <div className="bg-white shadow-lg overflow-hidden">
+              {/* <div className="bg-white shadow-lg overflow-hidden">
                 <img
                   src={serviceData?.mainImage || "/images/service-main.jpg"}
                   alt={`${serviceData?.title || "Physiotherapy"} in ${locationData.name}`}
                   className="w-full h-[220px] sm:h-[300px] md:h-[380px] object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Overview */}
               <div className="bg-white shadow-lg p-6 md:p-8">

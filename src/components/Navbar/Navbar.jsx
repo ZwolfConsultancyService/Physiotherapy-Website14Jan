@@ -39,7 +39,7 @@ export default function Navbar() {
     { name: "About", path: "/about-us" },
     { name: "Services", path: "/services" },
     { name: "Blog", path: "/blogs" },
-     { name: "Team", path: "/our-doctors" },
+    { name: "Team", path: "/our-doctors" },
     { name: "Contact", path: "/contacts" },
   ];
 
@@ -231,33 +231,35 @@ export default function Navbar() {
             </h3>
 
             <div className="space-y-5">
-             <div className="flex items-start gap-4">
-  <div className="w-9 h-9 bg-black rounded-sm flex items-center justify-center flex-shrink-0">
-    <MapPin size={16} className="text-white" />
-  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-9 h-9 bg-black rounded-sm flex items-center justify-center flex-shrink-0">
+                  <MapPin size={16} className="text-white" />
+                </div>
 
-  <div className="text-gray-600 text-sm leading-relaxed pt-1">
-    <p className="font-semibold text-black mb-1">Delhi Clinic</p>
-    <p>
-      A-2, Block A, Gulmohar Park,
-      <br />
-      New Delhi, Delhi 110049
-    </p>
+                <div className="text-gray-600 text-sm leading-relaxed pt-1">
+                  <p className="font-semibold text-black mb-1">Delhi Clinic</p>
+                  <p>
+                    A-2, Block A, Gulmohar Park,
+                    <br />
+                    New Delhi, Delhi 110049
+                  </p>
 
-    <div className="mt-4">
-      <p className="font-semibold text-black mb-1">Gurgaon Clinic</p>
-      <p>
-        Physiocentric
-        <br />
-        11, Market Road, Basement,
-        <br />
-        Behind Arjun Marg Shopping Mall,
-        <br />
-        DLF Phase 1, Gurgaon
-      </p>
-    </div>
-  </div>
-</div>
+                  <div className="mt-4">
+                    <p className="font-semibold text-black mb-1">
+                      Gurgaon Clinic
+                    </p>
+                    <p>
+                      Physiocentric
+                      <br />
+                      11, Market Road, Basement,
+                      <br />
+                      Behind Arjun Marg Shopping Mall,
+                      <br />
+                      DLF Phase 1, Gurgaon
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-9 h-9 bg-black rounded-sm flex items-center justify-center flex-shrink-0">
