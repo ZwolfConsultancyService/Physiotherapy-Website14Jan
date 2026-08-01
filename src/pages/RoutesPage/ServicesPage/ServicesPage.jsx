@@ -166,9 +166,8 @@ const ServicesPage = () => {
             </h2>
 
             <p className="text-gray-500 text-base md:text-lg leading-relaxed">
-              We offer comprehensive physical therapy services designed to reduce pain, restore mobility,
-              and improve overall physical function. Our personalized treatment plans help patients recover
-              from injuries, manage chronic conditions, and achieve long-term wellness goals.
+             A thorough history and assessment of the clinical condition of the patient helps to ascertain the treatment plan. Each therapist has a deep understanding of the investigations that enable us have a better understanding of the condition to make the treatment successful. 
+In most cases they respond to myofascial release followed by supervised rehabilitation. We use a variety of treatment modalities like dry needling, IASTM, kinesiology taping, cupping, myofascial release,  ultrasound therapy , class 3 and class 4 Laser therapy, IFT, TENS to alleviate pain and restore joint function. Exercise prescription keeping in mind good movement mechanics is the mainstay of treatment after pain management.
             </p>
           </div>
 

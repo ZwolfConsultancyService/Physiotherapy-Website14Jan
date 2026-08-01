@@ -61,9 +61,19 @@ export default function AboutSection() {
                 live pain-free.
               </p>
               <p className="text-black/80 text-base leading-relaxed max-w-lg">
+                PhysioCentric is a clinic that combines skill with the highest
+                level of patient care and empathy. Injury management requires a
+                detailed history, assessment and a workable diagnosis which leads
+                to the treatment plan — this is an integral part of the clinic
+                ethos with each practitioner.
+              </p>
+              <p className="text-black/80 text-base leading-relaxed max-w-lg">
                 Our physiotherapists treat back pain, joint pain, sports injuries,
                 post-surgical rehabilitation and neurological conditions — with
-                personalised plans for patients of all ages.
+                personalised plans for patients of all ages. The growing team has
+                well-educated and highly experienced physical therapists who take
+                pride in the individual treatment plan they embark on for each
+                patient's full recovery.
               </p>
             </div>
 
@@ -84,9 +94,9 @@ export default function AboutSection() {
             </div> */}
 
             {/* CTA */}
-            <Link to="/services">
+            <Link to="/about-us">
               <button className="mt-9 bg-black hover:bg-black/85 text-white text-xs tracking-[0.15em] uppercase px-10 py-4 transition-transform duration-300 hover:-translate-y-0.5">
-                View Services
+                View About
               </button>
             </Link>
           </div>
