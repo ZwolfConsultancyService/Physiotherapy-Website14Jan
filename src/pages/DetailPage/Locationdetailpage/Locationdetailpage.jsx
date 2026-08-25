@@ -8,24 +8,25 @@ import { allLocations, getLocationBySlug } from "../../../data/Locationsdata/Loc
 import { servicesDetailData } from "../../../data/servicesData/servicesData";
 import LocationsSlider from "./LocationsSlider";
 
-const parseServiceLocationSlug = (combinedSlug, locations) => {
-  for (const loc of locations) {
-    const suffix = `-in-${loc.slug}`;
-    if (combinedSlug.endsWith(suffix)) {
-      const serviceSlug = combinedSlug.slice(0, -suffix.length);
-      return { serviceSlug, locationSlug: loc.slug };
-    }
-  }
-  return { serviceSlug: combinedSlug, locationSlug: null };
-};
+// const parseServiceLocationSlug = (combinedSlug, locations) => {
+//   for (const loc of locations) {
+//     const suffix = `-in-${loc.slug}`;
+//     if (combinedSlug.endsWith(suffix)) {
+//       const serviceSlug = combinedSlug.slice(0, -suffix.length);
+//       return { serviceSlug, locationSlug: loc.slug };
+//     }
+//   }
+//   return { serviceSlug: combinedSlug, locationSlug: null };
+// };
 
 const LocationDetailPage = () => {
-  const { slug } = useParams();
+ const { slug, locationSlug } = useParams(); 
   const navigate = useNavigate();
   const [expandedFaq, setExpandedFaq] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const serviceSlug = slug;
 
-  const { serviceSlug, locationSlug } = parseServiceLocationSlug(slug, allLocations);
+  // const { serviceSlug, locationSlug } = parseServiceLocationSlug(slug, allLocations);
   const locationData = locationSlug ? getLocationBySlug(locationSlug) : null;
   const serviceData = servicesDetailData?.[serviceSlug] || servicesDetailData?.["physiotherapy"];
 
@@ -391,7 +392,7 @@ const LocationDetailPage = () => {
                       .slice(0, 6)
                       .map((loc, i) => (
                         <button key={i}
-                          onClick={() => navigate(`/service/${serviceSlug}-in-${loc.slug}`)}
+                         onClick={() => navigate(`/service/${serviceSlug}/${loc.slug}`)}
                           className="w-full text-left px-5 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black border-b border-gray-50 flex items-center justify-between group transition-colors">
                           <span>{loc.name}</span>
                           <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />

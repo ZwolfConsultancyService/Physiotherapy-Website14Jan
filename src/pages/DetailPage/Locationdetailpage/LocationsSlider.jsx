@@ -63,7 +63,7 @@ const LocationsSlider = ({ serviceSlug: propServiceSlug }) => {
         {doubled.map((loc, i) => (
           <button
             key={i}
-            onClick={() => navigate(`/service/${currentServiceSlug}-in-${loc.slug}`)}
+           onClick={() => navigate(`/service/${currentServiceSlug}/${loc.slug}`)}
             className="flex items-center gap-2.5 border border-gray-200 rounded-full px-5 py-2.5
               hover:border-black hover:bg-black hover:text-white
               transition-all duration-300 whitespace-nowrap group bg-white"

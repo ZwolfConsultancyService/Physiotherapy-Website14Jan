@@ -742,4 +742,4 @@ export const getLocationBySlug = (slug) =>
 // e.g. service slug = "muscle-stimulation", location slug = "gulmohar-park"
 // → "muscle-stimulation-in-gulmohar-park"
 export const getServiceLocationSlug = (serviceSlug, locationSlug) =>
-  `${serviceSlug}-in-${locationSlug}`;
+  `${serviceSlug}/${locationSlug}`;
