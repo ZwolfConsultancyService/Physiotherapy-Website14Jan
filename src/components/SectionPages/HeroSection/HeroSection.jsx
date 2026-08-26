@@ -394,6 +394,11 @@ export default function HeroSection() {
                   098105 13841
                 </button>
               </a>
+               <a href="tel:+9810518407" aria-label="Call PhysioCentric at 098105 18407">
+                <button className="border border-white text-white px-8 py-4 text-xs tracking-[0.15em] uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300">
+                 098105 18407
+                </button>
+              </a>
             </div>
           </div>
         </div>

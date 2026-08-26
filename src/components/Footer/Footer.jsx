@@ -119,6 +119,17 @@ export default function Footer() {
                 <span className="text-sm pt-1">098105 13841</span>
               </a>
 
+               <a
+                href="tel:09810513841"
+                className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors duration-300 group"
+              >
+                <div className="w-8 h-8 border border-gray-700 flex items-center justify-center flex-shrink-0 group-hover:border-white transition-colors">
+                  <Phone size={14} />
+                </div>
+                <span className="text-sm pt-1">098105 18407</span>
+              </a>
+
+
               {/* Email */}
               <a
                 href="mailto:reception.physiocentric@gmail.com"

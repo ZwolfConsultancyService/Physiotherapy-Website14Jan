@@ -197,6 +197,11 @@ export default function DoctorsPage() {
                   098105 13841
                 </button>
               </a>
+              <a href="tel:+919810513841" aria-label="Call PhysioCentric at 098105 18407">
+                <button className="border border-white/30 text-white px-8 py-4 text-xs tracking-widest uppercase font-bold hover:border-white transition-all duration-300">
+                  098105 18407
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -419,6 +424,9 @@ export default function DoctorsPage() {
                     <p className="text-xs text-gray-400 tracking-widest uppercase mb-1">Phone</p>
                     <a href="tel:+919810513841" className="text-gray-300 hover:text-white transition-colors text-sm" aria-label="Call PhysioCentric">
                       098105 13841
+                    </a>
+                    <a href="tel:+09810518407" className="text-gray-300 hover:text-white transition-colors text-sm" aria-label="Call PhysioCentric">
+                      098105 18407
                     </a>
                   </div>
                 </div>

@@ -67,6 +67,15 @@ export default function Navbar() {
                   098105 13841
                 </span>
               </a>
+              <a
+                href="tel:+9810518407"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
+              >
+                <Phone size={14} />
+                <span className="hidden sm:inline tracking-wide">
+                 98105 18407
+                </span>
+              </a>
               <Link
                 to="/contacts"
                 className="flex items-center gap-2 bg-white text-black px-4 py-1.5 text-xs tracking-widest uppercase font-semibold hover:bg-gray-100 transition-colors rounded-sm"
