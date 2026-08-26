@@ -41,6 +41,7 @@ export default function Navbar() {
     { name: "Blog", path: "/blogs" },
     { name: "Team", path: "/our-doctors" },
     { name: "Contact", path: "/contacts" },
+    { name: " Case Studies", path: "/case-studies" },
   ];
 
   return (

@@ -1,12 +1,28 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Download, Phone, Mail, ChevronRight, Home, Plus, Minus } from "lucide-react";
+import { Download, Phone, Mail, ChevronRight, Home, Plus, Minus, Calendar } from "lucide-react";
 import { servicesDetailData } from "../../../data/servicesData/servicesData";
 import LocationsSlider from "../Locationdetailpage/LocationsSlider";
+
+const API_BASE_URL = "https://dr-abhishek-physiotherapist-backend.onrender.com/api";
+
+const getSlug = (blog) => {
+  if (blog.slug) return blog.slug;
+  return (blog.title || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+};
+
+const getImageUrl = (blog) => {
+  if (blog.images?.length > 0 && blog.images[0].url) return blog.images[0].url;
+  if (blog.image) return blog.image;
+  if (blog.featuredImage) return blog.featuredImage;
+  if (blog.thumbnail) return blog.thumbnail;
+  return "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d";
+};
 
 const ServiceDetailPage = () => {
   const { slug } = useParams();
@@ -14,6 +30,8 @@ const ServiceDetailPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [expandedIndex, setExpandedIndex] = useState(3);
   const [expandedFaq, setExpandedFaq] = useState(0);
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
+  const [blogsLoading, setBlogsLoading] = useState(true);
 
   const serviceData =
     servicesDetailData[slug] || servicesDetailData["physiotherapist"];
@@ -23,6 +41,51 @@ const ServiceDetailPage = () => {
     setIsLoading(true);
     setTimeout(() => setIsLoading(false), 500);
   }, [slug]);
+
+  // ───────────────── Fetch blogs related to this service ─────────────────
+  // Blog ka "category" field service ke slug ya title se match hone par
+  // wo blog is service page par "Related Articles" mein dikhega.
+  // Agar koi related blog nahi milta, section simply nahi dikhega.
+  useEffect(() => {
+    const fetchRelatedBlogs = async () => {
+      try {
+        setBlogsLoading(true);
+        const res = await fetch(`${API_BASE_URL}/blog`);
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+        const data = await res.json();
+        const allBlogs = Array.isArray(data) ? data : data.data || data.blogs || [];
+
+        const serviceSlugLower = slug.toLowerCase();
+        const serviceTitleLower = (serviceData.title || "").toLowerCase();
+
+        // ── Match by category (primary — set this on each blog) ──
+        const categoryMatch = allBlogs.filter((blog) => {
+          const category = (blog.category || "").toLowerCase().trim();
+          return category === serviceSlugLower || category === serviceTitleLower;
+        });
+
+        if (categoryMatch.length > 0) {
+          setRelatedBlogs(categoryMatch);
+          return;
+        }
+
+        // ── Also check tags, in case some blogs use tags instead of category ──
+        const tagMatch = allBlogs.filter((blog) => {
+          const tags = (blog.tags || []).map((t) => (t || "").toLowerCase().trim());
+          return tags.includes(serviceSlugLower) || tags.includes(serviceTitleLower);
+        });
+
+        setRelatedBlogs(tagMatch);
+      } catch (err) {
+        console.error("Error fetching related blogs:", err);
+        setRelatedBlogs([]);
+      } finally {
+        setBlogsLoading(false);
+      }
+    };
+
+    fetchRelatedBlogs();
+  }, [slug, serviceData.title]);
 
   const toggleAccordion = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -202,19 +265,6 @@ const ServiceDetailPage = () => {
             {/* ── Main Content ── */}
             <main className="lg:col-span-9 order-1 lg:order-2 space-y-6 md:space-y-8">
 
-              {/* Main Image */}
-              {/* <div className="bg-white shadow-lg overflow-hidden">
-                <img
-                  src={serviceData.mainImage}
-                  alt={`${serviceData.title} treatment at PhysioCentric, New Delhi`}
-                  className="w-full h-[220px] sm:h-[320px] md:h-[400px] object-cover"
-                  loading="eager"
-                  fetchpriority="high"
-                  width={900}
-                  height={400}
-                />
-              </div> */}
-
               {/* Hero Intro + Overview */}
               <div className="bg-white shadow-lg p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-4" aria-hidden="true">
@@ -227,12 +277,6 @@ const ServiceDetailPage = () => {
                     {serviceData.hero.intro}
                   </p>
                 )}
-                {/* <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
-                  {serviceData.description}
-                </p>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  {serviceData.longDescription}
-                </p> */}
               </div>
 
               {/* Why This Service Matters */}
@@ -441,6 +485,72 @@ const ServiceDetailPage = () => {
                 </div>
               )}
 
+              {/* ───────────────── RELATED BLOGS ───────────────── */}
+              {!blogsLoading && relatedBlogs.length > 0 && (
+                <div className="bg-white shadow-lg p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-4" aria-hidden="true">
+                    <div className="w-10 h-0.5 bg-black"></div>
+                    <span className="text-xs tracking-widest uppercase font-semibold text-black">
+                      Related Articles
+                    </span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-black mb-6">
+                    Read More About {serviceData.title}
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {relatedBlogs.slice(0, 4).map((blog) => (
+                      <article
+                        key={blog._id || blog.id}
+                        onClick={() => navigate(`/blogs/${getSlug(blog)}`)}
+                        className="border border-gray-100 hover:border-black cursor-pointer transition-all duration-300 group overflow-hidden"
+                      >
+                        <div className="h-[160px] overflow-hidden">
+                          <img
+                            src={getImageUrl(blog)}
+                            alt={`${blog.title} – PhysioCentric physiotherapy article`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                            width={340}
+                            height={160}
+                            onError={(e) => {
+                              e.target.src = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d";
+                            }}
+                          />
+                        </div>
+                        <div className="p-4">
+                          {blog.tags?.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mb-2">
+                              {blog.tags.slice(0, 2).map((tag, i) => (
+                                <span
+                                  key={i}
+                                  className="text-[10px] px-2 py-0.5 bg-black/5 text-black/60 tracking-wide capitalize"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                          <h4 className="font-semibold text-black text-sm mb-3 line-clamp-2 group-hover:text-gray-600 transition-colors">
+                            {blog.title}
+                          </h4>
+                          <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                            <time className="text-xs text-gray-400 flex items-center gap-1">
+                              <Calendar className="w-3 h-3" aria-hidden="true" />
+                              {new Date(blog.createdAt || Date.now()).toLocaleDateString("en-US", {
+                                month: "short", day: "numeric", year: "numeric",
+                              })}
+                            </time>
+                            <span className="text-xs font-semibold text-black flex items-center gap-1 group-hover:gap-2 transition-all">
+                              Read <ChevronRight className="w-3 h-3" aria-hidden="true" />
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* CTA */}
               <div className="bg-black shadow-lg p-8 text-white text-center">
                 <div className="w-12 h-0.5 bg-white/30 mx-auto mb-6" aria-hidden="true"></div>
@@ -535,6 +645,12 @@ const ServiceDetailPage = () => {
         .container { width: 100%; margin-left: auto; margin-right: auto; }
         @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
         button { transition: all 0.3s ease; }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #000; }

@@ -12,8 +12,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+// ✅ Now pulled from .env (VITE_API_BASE_URL). Falls back to prod URL if not set.
 const API_BASE_URL =
-  "https://dr-abhishek-physiotherapist-backend.onrender.com/api";
+  import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
 
 const timeSlots = [
   "09:00 AM",
@@ -68,7 +69,7 @@ export default function ContactPage() {
     }
     setIsSubmitting(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/appointment`, {
+      const res = await fetch(`${API_BASE_URL}/api/appointment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -184,7 +185,7 @@ export default function ContactPage() {
                 "@type": "MedicalBusiness",
                 "name": "PhysioCentric",
                 "url": "https://www.physiocentric.in",
-                "telephone": "+919810513841",
+                "telephone": ["+919810513841", "+919810518407"],
                 "email": "reception.physiocentric@gmail.com",
                 "address": {
                   "@type": "PostalAddress",
@@ -423,7 +424,7 @@ export default function ContactPage() {
       <div className="pc-info-wrap">
         <div className="pc-info-grid">
           {[
-            { icon: Phone, label: "Call Us", lines: ["098105 13841"] },
+            { icon: Phone, label: "Call Us", lines: ["098105 13841", "098105 18407"] },
             { icon: Mail, label: "Email", lines: ["reception.physiocentric@gmail.com"] },
             {
               icon: MapPin,
@@ -598,6 +599,49 @@ export default function ContactPage() {
                 </div>
                 <div style={{ fontSize: "16px", fontWeight: 600, whiteSpace: "nowrap" }}>
                   09810513841
+                </div>
+              </div>
+              <ArrowRight size={18} style={{ marginLeft: "auto", opacity: 0.5, flexShrink: 0 }} />
+            </a>
+
+            {/* CALL CTA – second number */}
+            <a
+              href="tel:09810518407"
+              aria-label="Call PhysioCentric at 09810518407"
+              className="pc-cta"
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#333")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#000")}
+            >
+              <div
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                }}
+                aria-hidden="true"
+              >
+                <Phone size={17} style={{ color: "#fff" }} />
+              </div>
+              <div style={{ minWidth: 0 }}>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.5)",
+                    marginBottom: "2px",
+                    fontFamily: "'IBM Plex Mono', monospace",
+                  }}
+                >
+                  Call Direct
+                </div>
+                <div style={{ fontSize: "16px", fontWeight: 600, whiteSpace: "nowrap" }}>
+                  09810518407
                 </div>
               </div>
               <ArrowRight size={18} style={{ marginLeft: "auto", opacity: 0.5, flexShrink: 0 }} />

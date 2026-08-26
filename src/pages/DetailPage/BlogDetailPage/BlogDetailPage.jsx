@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Search, Calendar, User, Tag, Home, ChevronRight, ArrowRight } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API_BASE_URL = "https://dr-abhishek-physiotherapist-backend.onrender.com/api";
+// ✅ Now pulled from .env (VITE_API_BASE_URL). Falls back to prod URL if not set.
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
 
 const getSlug = (blog) => {
   if (blog.slug) return blog.slug;
@@ -44,7 +46,7 @@ export default function BlogDetailPage() {
   const fetchBlogDetail = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`${API_BASE_URL}/blog`);
+      const res = await fetch(`${API_BASE_URL}/api/blog`);
       if (!res.ok) throw new Error("Failed to fetch blogs");
       const data = await res.json();
       const allBlogs = Array.isArray(data) ? data : data.data || data.blogs || [];
@@ -83,7 +85,7 @@ export default function BlogDetailPage() {
 
   const fetchSidebarData = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/blog`);
+      const res = await fetch(`${API_BASE_URL}/api/blog`);
       if (!res.ok) return;
       const data = await res.json();
       const blogs = Array.isArray(data) ? data : data.data || data.blogs || [];
