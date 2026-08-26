@@ -8,11 +8,9 @@ import {
 } from "lucide-react";
 
 // ✅ Now pulled from .env (VITE_API_BASE_URL). Falls back to prod URL if not set.
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
 // ⚠️ Must match the same base path used in CaseStudyPage.jsx
-const CASE_STUDY_ENDPOINT = `${API_BASE_URL}/api/case-study`;
+const CASE_STUDY_ENDPOINT = `${API_BASE_URL}/api/case-studies`;
 
 const getImageUrl = (cs) => {
   if (typeof cs.image === "string" && cs.image) return cs.image;

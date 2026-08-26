@@ -5,12 +5,10 @@ import { Helmet } from "react-helmet-async";
 import { Search, Calendar, Home, ChevronRight } from "lucide-react";
 
 // ✅ Now pulled from .env (VITE_API_BASE_URL). Falls back to prod URL if not set.
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://api.physiocentricindia.com";
 // ⚠️ Adjust this if your backend mounts the router at a different path,
 // e.g. app.use("/api/case-studies", caseStudyRoutes) → change to "/case-studies"
-const CASE_STUDY_ENDPOINT = `${API_BASE_URL}/api/case-study`;
+const CASE_STUDY_ENDPOINT = `${API_BASE_URL}/api/case-studies`;
 
 const getId = (cs) => cs._id || cs.id;
 
