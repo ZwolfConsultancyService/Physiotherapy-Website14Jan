@@ -13,8 +13,8 @@ import Loader from "./layout/Loader/Loader";
 import ServiceDetailPage from "./pages/DetailPage/ServiceDetailPage/ServiceDetailPage";
 import LocationDetailPage from "./pages/DetailPage/Locationdetailpage/Locationdetailpage";
 import DoctorsPage from "./pages/DoctorsPage/DoctorsPage";
-import CaseStudyPage from "./pages/RoutesPage/CaseStudyPage/CaseStudyPage";
-import CaseStudyDetailPage from "./pages/DetailPage/CaseStudyDetailPage/CaseStudyDetailPage";
+import CaseStudyPage from "./pages/RoutesPage/Casestudypage/Casestudypage";
+import CaseStudyDetailPage from "./pages/DetailPage/Casestudydetailpage/Casestudydetailpage";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
