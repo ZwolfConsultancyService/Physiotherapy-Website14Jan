@@ -12,7 +12,10 @@ import {
   Clock, 
   Star, 
   ChevronRight,
-  Quote 
+  Quote,
+  ClipboardList,
+  Activity,
+  Dumbbell
 } from "lucide-react";
 import head from '../../../assets/teamfolder/head.jpeg'
 import about from '../../../assets/aboutsection.png'
@@ -26,15 +29,15 @@ export default function AboutUs() {
         <title>About PhysioCentric – Dr. Divya Sharma | Physiotherapy Clinic New Delhi</title>
         <meta 
           name="description" 
-          content="PhysioCentric, led by Dr. Divya Sharma, is New Delhi's premier physiotherapy clinic with 25+ years of experience. Restore movement, rebuild strength – book your consultation today."
+          content="PhysioCentric, led by Dr. Divya Sharma, is New Delhi's premier physiotherapy clinic with 18+ years of sports physiotherapy experience. Restore movement, rebuild strength – book your consultation today."
         />
         <meta 
           name="keywords" 
-          content="Dr. Divya Sharma physiotherapist, PhysioCentric clinic, physiotherapy New Delhi, best physio in Delhi, Gulmohar Park physio, back pain specialist, sports injury rehab" 
+          content="Dr. Divya Sharma physiotherapist, PhysioCentric clinic, physiotherapy New Delhi, sports physiotherapist, Gulmohar Park physio, back pain specialist, sports injury rehab" 
         />
         <link rel="canonical" href="https://www.physiocentric.in/about" />
         <meta property="og:title" content="About PhysioCentric – Expert Care by Dr. Divya Sharma" />
-        <meta property="og:description" content="25+ years, 1700+ happy patients. Personalised physiotherapy at PhysioCentric, New Delhi." />
+        <meta property="og:description" content="18+ years of sports physiotherapy experience. Personalised physiotherapy at PhysioCentric, New Delhi & Gurgaon." />
         <meta property="og:image" content="https://www.physiocentric.in/og-about.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -50,7 +53,6 @@ export default function AboutUs() {
               {
                 "@type": "MedicalBusiness",
                 "name": "PhysioCentric",
-                "foundingDate": "2000",
                 "founder": {
                   "@type": "Person",
                   "name": "Dr. Divya Sharma",
@@ -146,14 +148,15 @@ export default function AboutUs() {
                 <strong className="text-black">PhysioCentric</strong> was founded with a singular mission: 
                 to provide world‑class physiotherapy care that restores function, relieves pain, 
                 and rebuilds confidence. Under the expert leadership of <strong className="text-black">Dr. Divya Sharma</strong>, 
-                our clinic has become a trusted name in New Delhi for orthopaedic, neurological, 
-                and sports rehabilitation.
+                our clinic has become a trusted name in New Delhi for orthopaedic, sports, 
+                and rehabilitation care.
               </p>
               <p>
-                Dr. Sharma brings over 25 years of clinical experience, having treated thousands 
-                of patients with conditions ranging from chronic back pain to post‑surgical recovery. 
-                Her patient‑first philosophy ensures that every treatment plan is as unique as the 
-                person receiving it.
+                Dr. Sharma brings over 18 years of clinical experience as a sports physiotherapist, 
+                having treated athletes and patients alike with conditions ranging from chronic 
+                back pain to sports injuries. Her patient‑first philosophy, rooted in precise 
+                manual therapy and targeted rehabilitation, ensures every treatment plan is as 
+                unique as the person receiving it.
               </p>
               <blockquote className="border-l-4 border-black pl-6 py-3 bg-gray-50/50 -mx-4 sm:mx-0 px-4 sm:px-6 italic text-gray-700">
                 <Quote className="inline-block w-5 h-5 text-black/30 mr-2" />
@@ -183,26 +186,42 @@ export default function AboutUs() {
               <p className="text-lg text-black/70 font-medium mb-3">Chief Physiotherapist &amp; Founder, PhysioCentric</p>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Dr. Divya Sharma is a renowned physiotherapist with over two decades of clinical 
-                  experience in orthopaedics, neurology, and sports medicine. She holds a Master’s 
-                  degree in Physiotherapy from the prestigious <strong>All India Institute of Physical 
-                  Medicine &amp; Rehabilitation (AIIPMR)</strong> and has been a visiting consultant at 
-                  leading hospitals in Delhi.
+                  Dr. Divya Sharma holds an <strong>M.Phil. in Sports Biomechanics from Manchester 
+                  Metropolitan University, UK</strong>, and a Bachelor's degree in Physiotherapy from 
+                  the College of Allied Health Sciences, Manipal, Karnataka. She is an alumnus of 
+                  the prestigious Mayo College Girls School.
                 </p>
                 <p>
-                  Her passion for hands‑on therapy and her commitment to continuous learning have 
-                  made her a sought‑after expert for complex musculoskeletal conditions. She 
-                  regularly conducts workshops and has published research on innovative 
-                  rehabilitation techniques.
+                  As a sports physiotherapist with over 18 years of clinical experience, she excels 
+                  in patient care. Manual therapy combined with precise and targeted rehabilitation 
+                  enables her patients to recover from most musculoskeletal ailments. Biomechanics – 
+                  how muscle forces cause motion in the human body – is her particular forte.
                 </p>
                 <p>
-                  At PhysioCentric, Dr. Sharma personally oversees every patient’s journey – from 
-                  initial assessment to final discharge – ensuring the highest standard of care.
+                  She now owns her own clinics, PhysioCentric in New Delhi and Gurgaon, where she 
+                  collaborates with a team of experienced therapists to provide the best possible 
+                  care for every patient.
+                </p>
+                <p>
+                  Dr. Sharma has served as a Consultant Sports Physiotherapist with Team Tennis 
+                  (India) Pvt. Ltd and The Indian Golf Union, and spent 8 years at Sporting Ethos 
+                  Pvt Ltd, where she trained more than six therapists in her treatment methodologies. 
+                  For five consecutive years, she worked as an on‑tour physiotherapist for golfers 
+                  at the McLeod Russel Tour Championship – using taping techniques, therapeutic 
+                  massage, deep tissue work and neuromuscular facilitation to help players manage 
+                  strain and continue competing with minimal risk of further injury.
+                </p>
+                <p>
+                  While in England, Divya worked closely with the college soccer team in Manchester 
+                  and interned at the Junior Manchester United Club at Old Trafford.
+                </p>
+                <p className="text-sm text-gray-500 italic">
+                  Fun fact: Divya is a keen traveller and birder who loves a good hectic holiday!
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 mt-6">
-                <span className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full">Member – IAP</span>
-                <span className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full">Certified Dry Needling</span>
+                <span className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full">M.Phil. Sports Biomechanics (UK)</span>
+                <span className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full">18+ Years Clinical Experience</span>
                 <span className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full">Sports Rehab Specialist</span>
               </div>
             </div>
@@ -216,7 +235,7 @@ export default function AboutUs() {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white p-4 shadow-lg border border-black/10">
-                <p className="text-xs uppercase tracking-widest text-black/50 font-medium">25+ Years</p>
+                <p className="text-xs uppercase tracking-widest text-black/50 font-medium">18+ Years</p>
                 <p className="text-sm font-bold text-black">of Clinical Excellence</p>
               </div>
             </div>
@@ -224,7 +243,81 @@ export default function AboutUs() {
         </div>
       </section>
 
-     
+      {/* ─── WHAT WE OFFER ─── */}
+      <section className="bg-gray-50/80 py-16 sm:py-20 border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="w-10 h-[2px] bg-black" />
+              <span className="text-black/60 text-xs tracking-[0.2em] uppercase font-medium">Our Approach</span>
+              <span className="w-10 h-[2px] bg-black" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-black leading-tight mb-4">
+              What We Offer
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              A thorough history and assessment of each patient's clinical condition helps us 
+              ascertain the right treatment plan. Every therapist on our team has a deep 
+              understanding of the investigations needed to accurately assess a condition, 
+              making successful treatment possible.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-8 shadow-sm border border-gray-100 text-center">
+              <ClipboardList className="w-8 h-8 mx-auto mb-4 text-black/70" />
+              <h3 className="font-bold text-black mb-2">Assessment First</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Detailed history-taking and clinical assessment to identify the root cause, 
+                not just the symptoms.
+              </p>
+            </div>
+            <div className="bg-white p-8 shadow-sm border border-gray-100 text-center">
+              <Activity className="w-8 h-8 mx-auto mb-4 text-black/70" />
+              <h3 className="font-bold text-black mb-2">Targeted Treatment</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                In most cases, patients respond well to myofascial release followed by 
+                supervised rehabilitation.
+              </p>
+            </div>
+            <div className="bg-white p-8 shadow-sm border border-gray-100 text-center">
+              <Dumbbell className="w-8 h-8 mx-auto mb-4 text-black/70" />
+              <h3 className="font-bold text-black mb-2">Guided Exercise</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Exercise prescription built around good movement mechanics is the mainstay 
+                of treatment after pain management.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 sm:p-10 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+            <h3 className="font-bold text-black mb-4 text-lg">Treatment Modalities We Use</h3>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We use a variety of treatment modalities to alleviate pain and restore joint function:
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                "Dry Needling",
+                "IASTM",
+                "Kinesiology Taping",
+                "Cupping",
+                "Myofascial Release",
+                "Ultrasound Therapy",
+                "Class 3 & Class 4 Laser Therapy",
+                "IFT",
+                "TENS",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="bg-black/5 px-4 py-2 text-sm text-black font-medium rounded-full"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ─── WHY CHOOSE US (imported) ─── */}
       <WhyChooseUsSection />
