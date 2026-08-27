@@ -12,9 +12,17 @@ const CASE_STUDY_ENDPOINT = `${API_BASE_URL}/api/case-studies`;
 
 const getId = (cs) => cs._id || cs.id;
 
-// ✅ Always resolve a slug now — falls back to id ONLY if backend hasn't
-// sent a slug for that record yet (keeps old records from breaking).
-const getSlug = (cs) => cs.slug || getId(cs);
+// ─── SLUGIFY (title-based) ────────────────────────────────────────
+const slugifyTitle = (title) =>
+  (title || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+// ✅ Slug from DB if present, else generated from title — NEVER falls
+// back to the Mongo _id, so the URL never shows a raw id.
+const getSlug = (cs) => cs.slug || slugifyTitle(cs.title);
 
 const getImageUrl = (cs) => {
   if (typeof cs.image === "string" && cs.image) return cs.image;
