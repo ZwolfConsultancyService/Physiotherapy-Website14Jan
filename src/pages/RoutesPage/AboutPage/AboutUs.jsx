@@ -134,38 +134,56 @@ export default function AboutUs() {
           </div>
 
           {/* Text */}
-          <div className="order-1 lg:order-2">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-[2px] bg-black" />
-              <span className="text-black/60 text-xs tracking-[0.2em] uppercase font-medium">Who We Are</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-[1.15] mb-6">
-              Your Partners in <br className="hidden sm:block" /> 
-              <span className="text-black/70">Movement &amp; Wellness</span>
-            </h2>
-            <div className="space-y-5 text-gray-600 leading-relaxed">
-              <p className="text-base sm:text-lg">
-                <strong className="text-black">PhysioCentric</strong> was founded with a singular mission: 
-                to provide world‑class physiotherapy care that restores function, relieves pain, 
-                and rebuilds confidence. Under the expert leadership of <strong className="text-black">Dr. Divya Sharma</strong>, 
-                our clinic has become a trusted name in New Delhi for orthopaedic, sports, 
-                and rehabilitation care.
-              </p>
-              <p>
-                Dr. Sharma brings over 18 years of clinical experience as a sports physiotherapist, 
-                having treated athletes and patients alike with conditions ranging from chronic 
-                back pain to sports injuries. Her patient‑first philosophy, rooted in precise 
-                manual therapy and targeted rehabilitation, ensures every treatment plan is as 
-                unique as the person receiving it.
-              </p>
-              <blockquote className="border-l-4 border-black pl-6 py-3 bg-gray-50/50 -mx-4 sm:mx-0 px-4 sm:px-6 italic text-gray-700">
-                <Quote className="inline-block w-5 h-5 text-black/30 mr-2" />
-                “We don’t just treat symptoms – we empower you to move better, live better, 
-                and thrive.”
-                <span className="block text-sm font-medium text-black not-italic mt-1">— Dr. Divya Sharma</span>
-              </blockquote>
-            </div>
-          </div>
+         <div className="order-1 lg:order-2">
+  <div className="flex items-center gap-3 mb-5">
+    <span className="w-10 h-[2px] bg-black" />
+    <span className="text-black/60 text-xs tracking-[0.2em] uppercase font-medium">
+      Who We Are
+    </span>
+  </div>
+
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-[1.15] mb-6">
+    Your Partners in <br className="hidden sm:block" />
+    <span className="text-black/70">Movement &amp; Wellness</span>
+  </h2>
+
+  <div className="space-y-5 text-gray-600 leading-relaxed">
+    <p className="text-base sm:text-lg">
+      <strong className="text-black">PhysioCentric</strong> is a leading
+      physiotherapy centre in <strong className="text-black">Gulmohar Park, New Delhi</strong> —
+      rated <strong className="text-black">5.0 on Google by 37+ patients</strong>.
+      We specialise in evidence-based physiotherapy to help you recover,
+      move better and live pain-free.
+    </p>
+
+    <p>
+      PhysioCentric is a clinic that combines skill with the highest level
+      of patient care and empathy. Injury management requires a detailed
+      history, assessment and a workable diagnosis which leads to the
+      treatment plan — this is an integral part of the clinic ethos with
+      each practitioner.
+    </p>
+
+    <p>
+      Our physiotherapists treat <strong className="text-black">
+        back pain, joint pain, sports injuries, post-surgical rehabilitation
+        and neurological conditions
+      </strong> — with personalised plans for patients of all ages. The
+      growing team has well-educated and highly experienced physical
+      therapists who take pride in the individual treatment plan they
+      embark on for each patient's full recovery.
+    </p>
+
+    <blockquote className="border-l-4 border-black pl-6 py-3 bg-gray-50/50 -mx-4 sm:mx-0 px-4 sm:px-6 italic text-gray-700">
+      <Quote className="inline-block w-5 h-5 text-black/30 mr-2" />
+      We don’t just treat symptoms – we empower you to move better, live
+      better, and thrive.
+      <span className="block text-sm font-medium text-black not-italic mt-1">
+        — Dr. Divya Sharma
+      </span>
+    </blockquote>
+  </div>
+</div>
         </div>
       </section>
 

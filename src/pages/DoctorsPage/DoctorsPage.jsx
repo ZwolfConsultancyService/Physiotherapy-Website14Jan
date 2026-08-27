@@ -37,7 +37,7 @@ const team = [
   { name: "Dr Priyanka Dureja", role: "Sports & Exercise Physiotherapist", specialization: "Performance & Injury Prevention", image: doctor6 },
   { name: "Dr.Vaishali Parasher", role: "Geriatric Physiotherapist", specialization: "Elderly Care & Fall Prevention", image: doctor7 },
   { name: "Dr.Zoya", role: "Pain Management Specialist", specialization: "Chronic Pain & Dry Needling", image: doctor8 },
-  { name: "Dr.Akanksha Kundalia", role: "Pain Management Specialist", specialization: "Chronic Pain & Dry Needling", image: doctor9 },
+  { name: "Dr.Akanksha Kundalia", role: "Senior Physiotherapist", specialization: "12+ years of experience in physiotherapy and rehabilitation.", image: doctor9 },
 ];
 
 // ─── Stats ────────────────────────────────────────────────────────
@@ -377,9 +377,9 @@ export default function DoctorsPage() {
                         <Stethoscope size={18} className="text-white" />
                       </div>
                       <h3 className="text-lg font-bold text-white leading-tight mb-2">{doc.name}</h3>
-                      {/* <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">{doc.role}</p> */}
+                      <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">{doc.role}</p>
                       <div className="w-10 h-0.5 bg-white/30 mb-4" aria-hidden="true" />
-                      {/* <p className="text-sm text-gray-300 leading-relaxed">{doc.specialization}</p> */}
+                      <p className="text-sm text-gray-300 leading-relaxed">{doc.specialization}</p>
                     </div>
                   </div>
                 </div>
