@@ -22,7 +22,13 @@ import doctor9 from "../../assets/teamfolder/09.jpeg";
 
 // ─── Team Data ────────────────────────────────────────────────────
 const team = [
-  { name: "Dr.Akansha", role: "Senior Physiotherapist", specialization: "Sports Injuries & Rehabilitation", image: doctor1 },
+  {
+    name: "Dr.Akansha",
+    role: "Senior Physiotherapist",
+    specialization: "Sports Injuries & Rehabilitation",
+    image: doctor1,
+    bio: "Akansha (PT) graduated from Amity University, Noida and completed her Master's from Jamia Hamdard in Sports Physiotherapy. She has experience in treating post-operative knee, hip, and shoulder rehabilitation while working at the ABTP center at Sitaram Bhartiya Hospital for 2 years. Her experience-based learning makes her empathetic towards pain and dysfunction. She has successfully treated many patients at Physiocentric with manual therapy, dry needling, and exercise-based rehabilitation. Her treatment is targeted and unique, while keeping it individualistic for rehabilitation. Reading and exploring good coffee around places is her preferred activity in leisure time.",
+  },
   {
     name: "Dr Kanika Bisht",
     role: "Neurological Physiotherapist",
@@ -30,10 +36,34 @@ const team = [
     image: doctor2,
     bio: "Kanika Bisht is a Masters in Sports Physiotherapy from MYAS-GNDU Department of Sports Sciences and Medicine, Guru Nanak Dev University Amritsar. She did her Bachelor's in Physiotherapy from Banarsidas Chandiwala Institute of Physiotherapy, New Delhi. She excels in treating both musculoskeletal and sports related injuries, helping the patient achieve both short and long term goals. Her rehabilitation protocols are precise and specific. She specialises in various manual techniques like MFR, Dry Needling, Kinesiotaping, IASTM and Cupping. Kanika led the on-field physical therapy support at The Lloyd Delhi Golf Club League for the years 2022 and 2023, where she was responsible for managing both acute and chronic golf related injuries, getting the golfers ready for their game as well as providing recovery techniques post match. In her spare time she loves to dance, spend time with close ones, and has a keen interest in exploring new places.",
   },
-  { name: "Dr.Kiran Negi", role: "Pediatric Physiotherapist", specialization: "Pediatric & Women's Health", image: doctor3 },
-  { name: "Dr Mamta Bisht", role: "Orthopaedic Physiotherapist", specialization: "Joint Pain & Manual Therapy", image: doctor4 },
-  { name: "Dr.Raimey Rijiju", role: "Cardiopulmonary Physiotherapist", specialization: "Chest & Cardiac Rehabilitation", image: doctor5 },
-  { name: "Dr Priyanka Dureja", role: "Sports & Exercise Physiotherapist", specialization: "Performance & Injury Prevention", image: doctor6 },
+  {
+    name: "Dr.Kiran Negi",
+    role: "Pediatric Physiotherapist",
+    specialization: "Pediatric & Women's Health",
+    image: doctor3,
+    bio: "Dr. Kiran Negi is a highly dedicated and skilled physiotherapist with over 5 years of clinical experience in sports and musculoskeletal physiotherapy. She has developed strong expertise in injury prevention, rehabilitation, and performance enhancement, working with athletes across recreational to elite levels. Her treatment centers on finding and fixing root causes, not just symptoms. She combines evidence-based manual therapy, dry needling, progressive strength loading, and movement retraining to restore function. She is also a Certified Clinical Kinesio Taping Practitioner. With a patient-centric approach and deep knowledge of the musculoskeletal system, she is committed to helping individuals — whether an athlete, working professional, or someone dealing with everyday aches — move stronger and pain-free with a tailored program for each individual's goals.",
+  },
+  {
+    name: "Dr Mamta Bisht",
+    role: "Orthopaedic Physiotherapist",
+    specialization: "Joint Pain & Manual Therapy",
+    image: doctor4,
+    bio: "Mamta Bisht holds a Master's in Physiotherapy (2018–2020) from Manav Rachna International Institute of Research and Studies, Faridabad, Haryana, and a Bachelor's in Physiotherapy (2013–2018) from Banarsidas Chandiwala Institute of Physiotherapy, Kalkaji, Delhi. Her expertise encompasses the treatment of musculoskeletal and sports-related injuries, emphasizing injury assessment, diagnosis, and structured rehabilitation protocols. She integrates strength and conditioning, movement analysis and correction, along with recovery optimization to promote safe, efficient, and high-performance outcomes. She has over 7 years of hands-on experience in myofascial release (MFR), dry needling, Kinesio taping, muscle energy techniques (METs), and mobilisations (Maitland & McKenzie techniques). She is a fitness enthusiast who enjoys reading healthcare journals, listening to music, and spending time with family.",
+  },
+  {
+    name: "Dr.Raimey Rijiju",
+    role: "Cardiopulmonary Physiotherapist",
+    specialization: "Chest & Cardiac Rehabilitation",
+    image: doctor5,
+    bio: "Raimey Rijiju holds a Master's in Sports Physiotherapy from SDM College of Physiotherapy, SDM University, Dharwad, Karnataka, and completed her Bachelor's in Physiotherapy from HNB Garhwal University, Uttarakhand. Her area of expertise lies in treating both musculoskeletal and sports related injuries, focusing on injury assessment and diagnosis, structured rehabilitation protocols, strength & conditioning integration, movement analysis and correction, as well as recovery optimization. Her approach integrates clinical expertise with evidence-based protocols to ensure safe, efficient, and high-performance recovery outcomes. She also practices various treatment approaches such as MFR, dry needling, Kinesiotaping, and METs. During her leisure time, she enjoys singing, dancing, reading books, and spending time with family & friends.",
+  },
+  {
+    name: "Dr Priyanka Dureja",
+    role: "Sports & Exercise Physiotherapist",
+    specialization: "Performance & Injury Prevention",
+    image: doctor6,
+    bio: "Priyanka Dureja, MPT (Ortho.), is a physiotherapist with more than 15 years of clinical experience. She did her Bachelor's from Banarsidas Chandiwala Institute of Physiotherapy, GGSIPU, and her Master's in Orthopaedic Physiotherapy from Prakash Institute of Physiotherapy, Rehabilitation and Allied Medical Sciences, CCSU. Priyanka is on point with her assessment and diagnosis, and her treatment is simple yet effective for patient care and wellbeing. Her clinical interest is in treating spine and pelvic dysfunctions by combining kinesiology, education, and individually tailored therapeutic and cognitive exercises. She has successfully worked with disc prolapse cases, preventing the need for surgery, and has treated many sciatica and other nerve radiculopathy cases by incorporating neuromuscular control. She is a certified pelvic floor specialist working towards women's health and fitness, and uses innovation and technology to improve healthcare practices. She has a keen interest in human biomechanics, emphasising correct functioning of muscles around each joint for pain relief and efficient muscle functioning. In her free time, she spends time with friends or animal support groups, and loves to travel and explore new places.",
+  },
   {
     name: "Dr.Vaishali Parasher",
     role: "Geriatric Physiotherapist",
@@ -280,14 +310,27 @@ export default function DoctorsPage() {
               <div className="w-16 h-0.5 bg-black" aria-hidden="true" />
 
               <p className="text-gray-600 text-base leading-relaxed">
-                Dr. Divya Sharma is the founder and chief physiotherapist at PhysioCentric,
-                New Delhi. With over a decade of clinical expertise, she leads a team of
-                highly specialized physiotherapists committed to evidence-based, patient-first care.
+                Dr. Divya Sharma is an alumnus of the prestigious Mayo College Girls School.
+                As a sports physiotherapist with over 18 years of clinical experience, she
+                excels in patient care — combining manual therapy with precise, targeted
+                rehabilitation to help patients recover from most musculoskeletal ailments.
+                Biomechanics, the study of how muscle forces cause motion in the human body,
+                is her forte.
               </p>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Her vision for PhysioCentric is rooted in delivering accessible, expert
-                physiotherapy to patients of all ages — from acute injuries to chronic
-                conditions and post-surgical rehabilitation.
+                She now owns her own clinic, Physiocentric, in New Delhi and Gurgaon, where
+                she collaborates with her team of experienced therapists to provide the best
+                care for every patient. She has been a Consultant Sports Physiotherapist with
+                Team Tennis (India) Pvt. Ltd and The Indian Golf Union, and spent 8 years at
+                Sporting Ethos Pvt Ltd training many therapists in similar treatment
+                methodologies. Divya was the on-tour physiotherapist for golfers for five
+                consecutive years at the McLeod Russel Tour Championship, using taping
+                techniques, therapeutic massage, deep tissue work, and neuromuscular
+                facilitation to help players manage strain and continue competing with
+                minimal risk of further injury. While in England, she worked closely with
+                the college soccer team in Manchester and interned at the Jr. Manchester
+                United Club at Old Trafford. Divya is a keen traveller, birder, and loves a
+                hectic holiday!
               </p>
 
               {/* Qualifications */}
@@ -296,10 +339,10 @@ export default function DoctorsPage() {
                   Qualifications
                 </p>
                 {[
-                  "BPT — Bachelor of Physiotherapy",
-                  "MPT (Orthopaedics) — Master of Physiotherapy",
-                  "Certified Manual Therapist",
-                  "10+ Years Clinical Experience",
+                  "M.Phil. in Sports Biomechanics — Manchester Metropolitan University, UK",
+                  "BPT — College of Allied Health Sciences, Manipal, Karnataka",
+                  "Alumnus, Mayo College Girls School",
+                  "18+ Years Clinical Experience",
                 ].map((q, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center flex-shrink-0" aria-hidden="true">
@@ -360,7 +403,7 @@ export default function DoctorsPage() {
                   }}
                 >
                   <div
-                    className="relative w-full transition-transform duration-700"
+                    className="relative w-full transition-transform duration-700 min-h-[380px] sm:min-h-[400px] lg:min-h-[440px]"
                     style={{
                       aspectRatio: "3/4.3",
                       transformStyle: "preserve-3d",
@@ -384,23 +427,41 @@ export default function DoctorsPage() {
 
                     {/* BACK FACE — details */}
                     <div
-                      className="absolute inset-0 bg-black rounded-2xl border-2 border-black shadow-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-8 overflow-y-auto"
+                      className="absolute inset-0 bg-black rounded-2xl border-2 border-black shadow-xl overflow-hidden flex flex-col items-center text-center px-5 py-6"
                       style={{
                         backfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
                       }}
                     >
-                      <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center mb-4 flex-shrink-0" aria-hidden="true">
-                        <Stethoscope size={18} className="text-white" />
+                      {/* Fixed header — icon + name + role, never shrinks or clips */}
+                      <div className="flex flex-col items-center flex-shrink-0">
+                        <div
+                          className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center mb-3"
+                          aria-hidden="true"
+                        >
+                          <Stethoscope size={16} className="text-white" />
+                        </div>
+                        <h3 className="text-base font-bold text-white leading-tight mb-1 px-2">
+                          {doc.name}
+                        </h3>
+                        <p className="text-[10px] text-gray-400 tracking-widest uppercase mb-3">
+                          {doc.role}
+                        </p>
+                        <div className="w-10 h-0.5 bg-white/30 mb-3" aria-hidden="true" />
                       </div>
-                      <h3 className="text-lg font-bold text-white leading-tight mb-2">{doc.name}</h3>
-                      <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">{doc.role}</p>
-                      <div className="w-10 h-0.5 bg-white/30 mb-4 flex-shrink-0" aria-hidden="true" />
-                      {doc.bio ? (
-                        <p className="text-xs text-gray-300 leading-relaxed text-left">{doc.bio}</p>
-                      ) : (
-                        <p className="text-sm text-gray-300 leading-relaxed">{doc.specialization}</p>
-                      )}
+
+                      {/* Scrollable bio — only this part scrolls if content is long */}
+                      <div className="flex-1 min-h-0 overflow-y-auto w-full">
+                        {doc.bio ? (
+                          <p className="text-xs text-gray-300 leading-relaxed text-left">
+                            {doc.bio}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-gray-300 leading-relaxed">
+                            {doc.specialization}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
