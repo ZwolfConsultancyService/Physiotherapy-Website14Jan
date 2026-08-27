@@ -444,9 +444,9 @@ export default function DoctorsPage() {
                         <h3 className="text-base font-bold text-white leading-tight mb-1 px-2">
                           {doc.name}
                         </h3>
-                        <p className="text-[10px] text-gray-400 tracking-widest uppercase mb-3">
+                        {/* <p className="text-[10px] text-gray-400 tracking-widest uppercase mb-3">
                           {doc.role}
-                        </p>
+                        </p> */}
                         <div className="w-10 h-0.5 bg-white/30 mb-3" aria-hidden="true" />
                       </div>
 
