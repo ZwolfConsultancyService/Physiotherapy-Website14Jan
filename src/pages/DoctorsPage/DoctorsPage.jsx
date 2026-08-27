@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -30,14 +23,38 @@ import doctor9 from "../../assets/teamfolder/09.jpeg";
 // ─── Team Data ────────────────────────────────────────────────────
 const team = [
   { name: "Dr.Akansha", role: "Senior Physiotherapist", specialization: "Sports Injuries & Rehabilitation", image: doctor1 },
-  { name: "Dr Kanika Bisht", role: "Neurological Physiotherapist", specialization: "Neurological & Stroke Rehabilitation", image: doctor2 },
+  {
+    name: "Dr Kanika Bisht",
+    role: "Neurological Physiotherapist",
+    specialization: "Neurological & Stroke Rehabilitation",
+    image: doctor2,
+    bio: "Kanika Bisht is a Masters in Sports Physiotherapy from MYAS-GNDU Department of Sports Sciences and Medicine, Guru Nanak Dev University Amritsar. She did her Bachelor's in Physiotherapy from Banarsidas Chandiwala Institute of Physiotherapy, New Delhi. She excels in treating both musculoskeletal and sports related injuries, helping the patient achieve both short and long term goals. Her rehabilitation protocols are precise and specific. She specialises in various manual techniques like MFR, Dry Needling, Kinesiotaping, IASTM and Cupping. Kanika led the on-field physical therapy support at The Lloyd Delhi Golf Club League for the years 2022 and 2023, where she was responsible for managing both acute and chronic golf related injuries, getting the golfers ready for their game as well as providing recovery techniques post match. In her spare time she loves to dance, spend time with close ones, and has a keen interest in exploring new places.",
+  },
   { name: "Dr.Kiran Negi", role: "Pediatric Physiotherapist", specialization: "Pediatric & Women's Health", image: doctor3 },
   { name: "Dr Mamta Bisht", role: "Orthopaedic Physiotherapist", specialization: "Joint Pain & Manual Therapy", image: doctor4 },
   { name: "Dr.Raimey Rijiju", role: "Cardiopulmonary Physiotherapist", specialization: "Chest & Cardiac Rehabilitation", image: doctor5 },
   { name: "Dr Priyanka Dureja", role: "Sports & Exercise Physiotherapist", specialization: "Performance & Injury Prevention", image: doctor6 },
-  { name: "Dr.Vaishali Parasher", role: "Geriatric Physiotherapist", specialization: "Elderly Care & Fall Prevention", image: doctor7 },
-  { name: "Dr.Zoya", role: "Pain Management Specialist", specialization: "Chronic Pain & Dry Needling", image: doctor8 },
-  { name: "Dr.Akanksha Kundalia", role: "Senior Physiotherapist", specialization: "12+ years of experience in physiotherapy and rehabilitation.", image: doctor9 },
+  {
+    name: "Dr.Vaishali Parasher",
+    role: "Geriatric Physiotherapist",
+    specialization: "Elderly Care & Fall Prevention",
+    image: doctor7,
+    bio: "Dr Vaishali Parasher holds a Master's in Sports Physiotherapy from Manav Rachna University, Faridabad, Haryana, and completed her Bachelor's in Physical Therapy from Jamia Hamdard, New Delhi. With more than six years of clinical experience, her areas of expertise include posture alignment, sports rehab training, manual therapy, musculoskeletal conditions, orthopedic conditions, pre & post-operative rehabilitation, complex surgeries rehab, and sports injuries. She proficiently uses techniques such as cupping, IASTM, Dry Needling, taping, rehabilitation programmes, soft tissue release, and fitness training. Her strong skill in assessing clinical conditions enables her to make correct diagnoses and treatment plans. She has a strong passion and enthusiasm for travel.",
+  },
+  {
+    name: "Dr.Zoya",
+    role: "Pain Management Specialist",
+    specialization: "Chronic Pain & Dry Needling",
+    image: doctor8,
+    bio: "Zoya Zaidi did her Masters in Sports Physiotherapy from Manav Rachna International Institute of Research and Studies. Her areas of interest are posture re-education, sport injury specific rehabilitation, and post surgery rehabilitation. She is a certified Mulligan therapist and is proficient in techniques like Dry Needling, Taping, Cupping, Myofascial Release, MET (Muscle Energy Technique), and Neurodynamic solutions. Her assessment and treatment are precise, with a focus on building a strong practice using various approaches that target the root cause of dysfunction for long lasting benefits. In her free time she likes to spend time with her family and hang out with friends.",
+  },
+  {
+    name: "Dr.Akanksha Kundalia",
+    role: "Senior Physiotherapist",
+    specialization: "12+ years of experience in physiotherapy and rehabilitation.",
+    image: doctor9,
+    bio: "Akansha Kundaliya completed her BPT from Dr D. Y Patil Vidyapeeth, Pune, with her internship at Dr D Y Patil Vidyapeeth and Ruby Hall Clinic, Pune. She completed her MPT (Ortho) from Chaudhary Charan Singh University, UP, and has 12+ years of experience. Her approach focuses on detailed clinical assessment, identifying the underlying movement dysfunction, and restoring optimal biomechanics rather than simply treating the site of pain. With 12+ years of clinical experience, she integrates evidence-informed hands-on techniques—including Mulligan and Maitland concepts, osteopathic spine assessment, myofascial techniques, and dry needling—with an individualized, graded rehabilitation program. The goal is to identify the root cause, restore joint and soft-tissue mobility, improve movement quality, and progressively rebuild strength and functional capacity for sustainable recovery.",
+  },
 ];
 
 // ─── Stats ────────────────────────────────────────────────────────
@@ -367,19 +384,23 @@ export default function DoctorsPage() {
 
                     {/* BACK FACE — details */}
                     <div
-                      className="absolute inset-0 bg-black rounded-2xl border-2 border-black shadow-xl overflow-hidden flex flex-col items-center justify-center text-center px-6"
+                      className="absolute inset-0 bg-black rounded-2xl border-2 border-black shadow-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-8 overflow-y-auto"
                       style={{
                         backfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
                       }}
                     >
-                      <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center mb-4" aria-hidden="true">
+                      <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center mb-4 flex-shrink-0" aria-hidden="true">
                         <Stethoscope size={18} className="text-white" />
                       </div>
                       <h3 className="text-lg font-bold text-white leading-tight mb-2">{doc.name}</h3>
                       <p className="text-xs text-gray-400 tracking-widest uppercase mb-4">{doc.role}</p>
-                      <div className="w-10 h-0.5 bg-white/30 mb-4" aria-hidden="true" />
-                      <p className="text-sm text-gray-300 leading-relaxed">{doc.specialization}</p>
+                      <div className="w-10 h-0.5 bg-white/30 mb-4 flex-shrink-0" aria-hidden="true" />
+                      {doc.bio ? (
+                        <p className="text-xs text-gray-300 leading-relaxed text-left">{doc.bio}</p>
+                      ) : (
+                        <p className="text-sm text-gray-300 leading-relaxed">{doc.specialization}</p>
+                      )}
                     </div>
                   </div>
                 </div>
