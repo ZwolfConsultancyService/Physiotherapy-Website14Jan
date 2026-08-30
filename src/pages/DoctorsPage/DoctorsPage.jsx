@@ -27,7 +27,7 @@ const team = [
     role: "Senior Physiotherapist",
     specialization: "Sports Injuries & Rehabilitation",
     image: doctor1,
-    bio: "Akansha (PT) graduated from Amity University, Noida and completed her Master's from Jamia Hamdard in Sports Physiotherapy. She has experience in treating post-operative knee, hip, and shoulder rehabilitation while working at the ABTP center at Sitaram Bhartiya Hospital for 2 years. Her experience-based learning makes her empathetic towards pain and dysfunction. She has successfully treated many patients at Physiocentric with manual therapy, dry needling, and exercise-based rehabilitation. Her treatment is targeted and unique, while keeping it individualistic for rehabilitation. Reading and exploring good coffee around places is her preferred activity in leisure time.",
+    bio: "Akansha (PT) graduated from Amity University, Noida and completed her Master's from Jamia Hamdard in Sports Physiotherapy. She has experience in treating post-operative knee, hip, and shoulder rehabilitation while working at the ABTP center at Sitaram Bhartiya Hospital for 2 years. Her experience-based learning makes her empathetic towards pain and dysfunction. She has successfully treated many patients at Physiocentric with manual therapy, dry needling, and exercise-based rehabilitation. Her treatment is targeted and unique, while keeping it individualistic for rehabilitation. Her free time is spent reading and exploring good coffee.",
   },
   {
     name: "Dr Kanika Bisht",
@@ -83,25 +83,12 @@ const team = [
     role: "Senior Physiotherapist",
     specialization: "12+ years of experience in physiotherapy and rehabilitation.",
     image: doctor9,
-    bio: "Akansha Kundaliya completed her BPT from Dr D. Y Patil Vidyapeeth, Pune, with her internship at Dr D Y Patil Vidyapeeth and Ruby Hall Clinic, Pune. She completed her MPT (Ortho) from Chaudhary Charan Singh University, UP, and has 12+ years of experience. Her approach focuses on detailed clinical assessment, identifying the underlying movement dysfunction, and restoring optimal biomechanics rather than simply treating the site of pain. With 12+ years of clinical experience, she integrates evidence-informed hands-on techniques—including Mulligan and Maitland concepts, osteopathic spine assessment, myofascial techniques, and dry needling—with an individualized, graded rehabilitation program. The goal is to identify the root cause, restore joint and soft-tissue mobility, improve movement quality, and progressively rebuild strength and functional capacity for sustainable recovery.",
+    bio: "Akansha Kundaliya has done her Bachelors from Dr D. Y Patil Vidyapeeth, Pune and Masters in Orthopaedic from Chaudhary Charan Singh  University, UPShe has a clinical experience of more than 12 years. Akansha focuses on detailed clinical assessment, identifying the underlying movement dysfunction, and restoring optimal biomechanics rather than simply treating the site of pain.Her treatment integrates hands-on techniques like Mulligan and Maitland, myofascial techniques and dry needling—with an individualized, graded rehabilitation program. This helps to restore good movement mechanics and sustainable recovery.She is a hands on mother and in her free time she spends time with family.",
   },
 ];
 
-// ─── Stats ────────────────────────────────────────────────────────
-const stats = [
-  { icon: Users, number: "37+", label: "Happy Patients" },
-  { icon: Star, number: "5.0", label: "Google Rating" },
-  { icon: Award, number: "8", label: "Expert Doctors" },
-  { icon: Clock, number: "9+", label: "Years of Care" },
-];
 
-// ─── Specializations ──────────────────────────────────────────────
-const specializations = [
-  { icon: Activity, title: "Sports Rehabilitation", desc: "From sprains to ACL tears, we get athletes back in the game." },
-  { icon: Zap, title: "Neurological Therapy", desc: "Expert care for stroke, Parkinson's, and spinal cord injuries." },
-  { icon: Heart, title: "Women's Health", desc: "Antenatal, postnatal, and pelvic floor physiotherapy." },
-  { icon: Stethoscope, title: "Orthopaedic Care", desc: "Joint pain, fractures, and post-surgery rehabilitation." },
-];
+
 
 // ─── Component ────────────────────────────────────────────────────
 export default function DoctorsPage() {
